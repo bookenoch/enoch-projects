@@ -581,7 +581,16 @@ function renderCard(p, courts) {
       </div>
       <div class="meter-labels">
         <span>${p.ntrp ? (p.ntrp - 0.5).toFixed(1) : '—'} floor</span>
-        <span class="active">${meterPct.toFixed(0)}% of range</span>
+        <span class="active">${
+          meterPct >= 96 ? 'Nationals or bust' :
+          meterPct >= 86 ? 'Turning down teams' :
+          meterPct >= 71 ? 'Postseason ready' :
+          meterPct >= 56 ? 'Captains are noticing' :
+          meterPct >= 41 ? 'Holding steady' :
+          meterPct >= 26 ? 'Barely on the radar' :
+          meterPct >= 11 ? 'Warming the bench' :
+          'Crickets from captains'
+        }</span>
         <span>${ntrp} ceiling</span>
       </div>
     </div>
