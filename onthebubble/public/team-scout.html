@@ -1102,7 +1102,9 @@
       const n2 = isDoubles ? pa.display[1] : null;
       const p1 = byName[(n1 || '').toLowerCase()];
       const p2 = n2 ? byName[(n2 || '').toLowerCase()] : null;
-      const combined = ((pa.r1 || 0) + (pa.r2 || 0)).toFixed(2);
+      const r1 = pa.r1 != null ? pa.r1 : (p1?.dynamic_rating ?? null);
+      const r2 = pa.r2 != null ? pa.r2 : (p2?.dynamic_rating ?? null);
+      const combined = ((r1 || 0) + (r2 || 0)).toFixed(2);
 
       // Most common court number
       const topCourt = Object.entries(pa.courtCounts)
@@ -1126,8 +1128,8 @@
             </div>
           </div>
           <div class="court-body">
-            ${playerRow(n1, pa.r1, p1)}
-            ${n2 ? playerRow(n2, pa.r2, p2) : ''}
+            ${playerRow(n1, r1, p1)}
+            ${n2 ? playerRow(n2, r2, p2) : ''}
           </div>
           <div class="court-stats">
             <div class="court-stat">
