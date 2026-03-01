@@ -328,12 +328,13 @@
   .match-score {
     font-size: 13px;
     font-weight: 600;
-    text-align: right;
     font-variant-numeric: tabular-nums;
-    white-space: nowrap;
     flex-shrink: 0;
-    min-width: 90px;
+    display: grid;
+    grid-template-columns: repeat(3, 26px);
+    gap: 0 4px;
   }
+  .match-score .set { text-align: center; }
   .match-score.win { color: var(--green); }
   .match-score.loss { color: var(--red); }
   .match-meta {
@@ -528,7 +529,7 @@ function renderCard(p, courts) {
         <div class="match-main">
           <div class="match-result ${won ? 'win' : 'loss'}">${won ? 'W' : 'L'}</div>
           <div class="match-name">vs ${oppLabel}${partnerLabel}</div>
-          <div class="match-score ${won ? 'win' : 'loss'}">${c.score || ''}</div>
+          <div class="match-score ${won ? 'win' : 'loss'}">${(c.score || '').split(/\s+/).filter(Boolean).map(s => '<span class="set">' + s + '</span>').join('')}</div>
         </div>
         <div class="match-meta">
           <div class="opp-date">${[lg.line1, lg.line2].filter(Boolean).join(' \u2022 ')}</div>

@@ -461,9 +461,12 @@
   .ps-score {
     color: var(--text-secondary);
     font-variant-numeric: tabular-nums;
-    min-width: 90px;
-    text-align: right;
+    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 26px);
+    gap: 0 4px;
   }
+  .ps-score .set { text-align: center; }
   .ps-score.win { color: var(--green); }
   .ps-score.loss { color: var(--red); }
 
@@ -1284,7 +1287,7 @@
         <div class="ps-court-row">
           <div class="ps-court-label">Court ${c.court_number}</div>
           <div class="ps-pairing">${esc(ourPair)}</div>
-          <div class="ps-score ${scoreCls}">${esc(scoreStr)}</div>
+          <div class="ps-score ${scoreCls}">${scoreStr.split(/\s+/).filter(Boolean).map(s => '<span class="set">' + esc(s) + '</span>').join('')}</div>
         </div>`;
     }).join('');
 
