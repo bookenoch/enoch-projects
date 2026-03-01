@@ -1094,6 +1094,14 @@
       const p2 = byName[(p2name || '').toLowerCase()];
       const stats = pairingStats(p1name, p2name);
 
+      // Opponent side
+      const o1name = isHome ? c.away_player1 : c.home_player1;
+      const o2name = isHome ? c.away_player2 : c.home_player2;
+      const or1    = isHome ? c.away_rating1  : c.home_rating1;
+      const or2    = isHome ? c.away_rating2  : c.home_rating2;
+      const oppCombined = ((or1 || 0) + (or2 || 0)).toFixed(2);
+      const oppLabel = [o1name, o2name].filter(Boolean).map(n => lastName(n)).join(' & ');
+
       return `
         <div class="court-card">
           <div class="court-header">
@@ -1108,7 +1116,19 @@
           </div>
           <div class="court-body">
             ${playerRow(p1name, r1, p1)}
-            ${playerRow(p2name, r2, p2)}
+            ${p2name ? playerRow(p2name, r2, p2) : ''}
+          </div>
+          <div style="padding:0 16px">
+            <div style="display:flex;align-items:center;gap:8px;padding:4px 0">
+              <div style="flex:1;height:1px;background:var(--divider)"></div>
+              <div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim)">vs ${esc(oppLabel)}</div>
+              <div style="font-size:12px;color:var(--text-secondary)">${oppCombined}</div>
+              <div style="flex:1;height:1px;background:var(--divider)"></div>
+            </div>
+          </div>
+          <div class="court-body" style="padding-top:8px">
+            ${playerRow(o1name, or1, null)}
+            ${o2name ? playerRow(o2name, or2, null) : ''}
           </div>
           <div class="court-stats">
             <div class="court-stat">
