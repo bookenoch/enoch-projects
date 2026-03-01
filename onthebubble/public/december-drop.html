@@ -80,32 +80,42 @@
   }
   .page-sub strong { color: var(--text-primary); font-weight: 600; }
 
-  /* DISTRICT TOGGLE */
-  .district-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 24px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--divider);
+  /* DISTRICT PILLS */
+  .filter-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+    padding-bottom: 4px;
+    scrollbar-width: none;
   }
-  .district-label {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text-dim);
-  }
-  .district-name {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--gold);
+  .filter-scroll::-webkit-scrollbar { display: none; }
+  .filter-pills {
     display: flex;
-    align-items: center;
-    gap: 5px;
+    gap: 6px;
+    width: max-content;
+  }
+  .pill {
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
     cursor: pointer;
+    border: 1px solid var(--divider);
+    color: var(--text-secondary);
+    background: transparent;
+    white-space: nowrap;
+    transition: all 0.2s;
   }
-  .district-name svg { width: 12px; height: 12px; stroke: currentColor; }
+  .pill.active {
+    background: var(--gold-dim);
+    border-color: var(--gold-mid);
+    color: var(--gold);
+  }
+  .pill:hover:not(.active) {
+    border-color: #333;
+    color: var(--text-primary);
+  }
 
   /* SUMMARY PILLS */
   .summary-row {
@@ -278,16 +288,20 @@
   <!-- PAGE HEADER -->
   <div class="page-header">
     <div class="page-eyebrow">Annual Ratings Release</div>
-    <div class="page-title">Bump Day</div>
-    <div class="page-sub"><strong>Northeastern Ohio Area</strong> · 2025 Ratings Update · 187 players affected</div>
+    <div class="page-title">Bump Day 12.01</div>
+    <div class="page-sub">2025 Ratings Update · 187 players affected</div>
   </div>
 
   <!-- DISTRICT -->
-  <div class="district-row">
-    <div class="district-label">District</div>
-    <div class="district-name">
-      Northeastern Ohio Area
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  <div class="section-header" style="margin-bottom: 8px;">
+    <div class="section-title" style="color: var(--text-dim);">District</div>
+    <div class="section-line" style="background: var(--divider);"></div>
+  </div>
+  <div class="filter-scroll">
+    <div class="filter-pills">
+      <div class="pill active" onclick="selectDistrict(this)">Northeastern Ohio Area</div>
+      <div class="pill" onclick="selectDistrict(this)">Northwestern Ohio</div>
+      <div class="pill" onclick="selectDistrict(this)">Ohio Valley</div>
     </div>
   </div>
 
@@ -549,6 +563,13 @@
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
     </div>
   </div>
+
+  <script>
+  function selectDistrict(el) {
+    document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+    el.classList.add('active');
+  }
+  </script>
 
 </body>
 </html>
