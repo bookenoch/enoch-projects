@@ -431,13 +431,7 @@
       ? (p.dynamic_rating >= p.ntrp - 0.05 ? 'var(--red)' : p.dynamic_rating <= (p.ntrp - 0.5) + 0.05 ? 'var(--blue)' : 'var(--green)')
       : 'var(--text-primary)';
 
-    const ntrpLabel = p.ntrp ? Number(p.ntrp).toFixed(1) : '';
-    const subParts = [ntrpLabel, p.location, p.gender].filter(Boolean);
-
-    const w = p.wins || 0;
-    const l = p.losses || 0;
-    const hasRecord = w > 0 || l > 0;
-    const recColor = hasRecord ? (w > l ? 'var(--green)' : w < l ? 'var(--red)' : 'var(--text-primary)') : '';
+    const subParts = [p.location, p.gender].filter(Boolean);
 
     return `
     <div class="result-row" onclick="location.href='player-card.html?id=${p.id}'">
@@ -445,7 +439,7 @@
         <div class="result-avatar">${esc(initials)}</div>
         <div class="result-info">
           <div class="result-name">${esc(p.name)}</div>
-          <div class="result-sub">${esc(subParts.join(' \u2022 '))}${hasRecord ? ' <span style="color:' + recColor + '">\u2022 ' + w + '-' + l + '</span>' : ''}</div>
+          <div class="result-sub">${esc(subParts.join(' \u2022 '))}</div>
         </div>
       </div>
       <div class="result-right">
