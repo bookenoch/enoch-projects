@@ -830,7 +830,7 @@
         }
       }
       // Fall back to group label (e.g. "4.0 Men")
-      const gm = t[0].group.match(/([\d.]+)\s*(Men|Women|Mixed)?/);
+      const gm = t[0].group.match(/(\d+\.\d+)\s*(Men|Women|Mixed)/);
       if (gm) return `${age} ${gm[1]} ${gm[2] || type}`;
     }
     return `${age} ${type}`;
