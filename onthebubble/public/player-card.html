@@ -513,8 +513,9 @@ function renderCard(p, courts) {
   const thirdClass   = pctClass(s.third_set_pct_2025);
   const postClass    = pctClass(s.postseason_pct_2025);
 
-  // Recent match rows from court appearances
-  const matchRows = courts.slice(0, 5).map(c => {
+  // Recent match rows from court appearances (all leagues, sorted by date)
+  const INITIAL_MATCHES = 6;
+  const allMatchRows = courts.map(c => {
     const isHome    = c.home_player1 === p.name || c.home_player2 === p.name;
     const won       = c.winner === (isHome ? 'home' : 'away');
     const partners  = isHome
@@ -538,7 +539,21 @@ function renderCard(p, courts) {
           <div class="opp-date">${[lg.line1, lg.line2].filter(Boolean).join(' \u2022 ')}</div>
         </div>
       </div>`;
-  }).join('');
+  });
+  let matchRows;
+  if (allMatchRows.length <= INITIAL_MATCHES) {
+    matchRows = allMatchRows.join('');
+  } else {
+    matchRows = allMatchRows.slice(0, INITIAL_MATCHES).join('') +
+      '<div id="hiddenMatches" style="display:none">' + allMatchRows.slice(INITIAL_MATCHES).join('') + '</div>' +
+      '<div id="showMoreBtn" style="text-align:center;padding:14px 0">' +
+        '<button onclick="document.getElementById(\'hiddenMatches\').style.display=\'block\';this.parentElement.style.display=\'none\';" ' +
+        'style="background:var(--surface-3);border:1px solid var(--divider);border-radius:var(--radius-sm);' +
+        'padding:10px 24px;font-family:\'DM Sans\',sans-serif;font-size:12px;font-weight:600;' +
+        'letter-spacing:0.08em;text-transform:uppercase;color:var(--text-secondary);cursor:pointer;' +
+        'transition:all 0.2s">Show All ' + allMatchRows.length + ' Matches</button>' +
+      '</div>';
+  }
 
   document.title = `OnTheBubble — ${p.name}`;
   document.getElementById('card').innerHTML = `

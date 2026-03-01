@@ -184,7 +184,6 @@ app.get('/api/players/courts', (req, res) => {
     WHERE mc.home_player1 = ? OR mc.home_player2 = ?
        OR mc.away_player1 = ? OR mc.away_player2 = ?
     ORDER BY m.date DESC
-    LIMIT 10
   `).all(name, name, name, name);
 
   res.json(rows);
