@@ -50,7 +50,7 @@
     margin-bottom: 24px;
   }
   .logo { cursor: pointer; }
-  .logo svg { height: 28px; width: auto; }
+  .logo svg { height: 50px; width: auto; }
   .back-btn {
     font-size: 12px;
     color: var(--text-secondary);
@@ -1006,19 +1006,16 @@
 
   function renderCourtCards(matches, roster) {
     const el = document.getElementById('courtList');
+    document.getElementById('stackAlert').innerHTML = '';
     if (!matches.length) {
       el.innerHTML = '<div style="color:var(--text-dim);font-size:13px;padding:12px 0">No matches played yet.</div>';
       updateSummaryStrip([], null);
       return;
     }
 
-    const latest   = matches[0]; // sorted date DESC — most recent
-    const isHome   = latest.home_team === teamName;
-    const opponent = isHome ? latest.away_team : latest.home_team;
-
     document.getElementById('courtSectionHeader').textContent = 'Top Court Pairings';
 
-    updateSummaryStrip(matches, latest);
+    updateSummaryStrip(matches, matches[0]);
 
     const byName = {};
     for (const p of roster) byName[p.name.toLowerCase()] = p;
@@ -1049,101 +1046,104 @@
         </div>`;
     };
 
-    // Compute pairing win/loss/streak across ALL available matches
-    function pairingStats(p1, p2) {
-      let wins = 0, losses = 0, streak = 0, streakType = null;
-      const sorted = [...matches].sort((a, b) => new Date(a.date) - new Date(b.date));
-      for (const m of sorted) {
-        const mHome = m.home_team === teamName;
-        for (const c of (m.courts || [])) {
-          const cp1 = mHome ? c.home_player1 : c.away_player1;
-          const cp2 = mHome ? c.home_player2 : c.away_player2;
-          const pair = new Set([cp1, cp2]);
-          if (!pair.has(p1) || !pair.has(p2)) continue;
-          const won = c.winner === (mHome ? 'home' : 'away');
-          if (won) wins++; else losses++;
-          const cur = won ? 'W' : 'L';
-          streak = (streakType === cur) ? streak + 1 : 1;
-          streakType = cur;
+    // Aggregate pairings across ALL matches (chronological for streak tracking)
+    const sorted = [...matches].sort((a, b) => new Date(a.date) - new Date(b.date));
+    const pairMap = {};
+
+    for (const m of sorted) {
+      const mHome = m.home_team === teamName;
+      for (const c of (m.courts || [])) {
+        const p1 = mHome ? c.home_player1 : c.away_player1;
+        const p2 = mHome ? c.home_player2 : c.away_player2;
+        const r1 = mHome ? c.home_rating1 : c.away_rating1;
+        const r2 = mHome ? c.home_rating2 : c.away_rating2;
+        const display = [p1, p2].filter(Boolean);
+        const key = [...display].sort().join('|||');
+        if (!key) continue;
+
+        if (!pairMap[key]) {
+          pairMap[key] = { display: [...display], freq: 0, wins: 0, losses: 0, streak: 0, streakType: null, courtCounts: {}, r1: null, r2: null };
         }
+        const pa = pairMap[key];
+        pa.freq++;
+        pa.courtCounts[c.court_number] = (pa.courtCounts[c.court_number] || 0) + 1;
+
+        // Keep latest display order and ratings (chronological, last write wins)
+        pa.display = [...display];
+        pa.r1 = r1;
+        pa.r2 = r2;
+
+        const won = c.winner === (mHome ? 'home' : 'away');
+        if (won) pa.wins++; else pa.losses++;
+        const cur = won ? 'W' : 'L';
+        pa.streak = (pa.streakType === cur) ? pa.streak + 1 : 1;
+        pa.streakType = cur;
       }
-      const total = wins + losses;
-      const winPctRaw = total ? Math.round(wins / total * 100) : null;
-      return {
-        record:  wins + '-' + losses,
-        recordCls: wins > losses ? 'green' : wins < losses ? 'red' : '',
-        winPct:  winPctRaw != null ? winPctRaw + '%' : '--',
-        winPctCls: winPctRaw != null ? (winPctRaw > 50 ? 'green' : winPctRaw < 50 ? 'red' : '') : '',
-        streak:  streakType ? streakType + streak : '--',
-        streakType,
-      };
     }
 
-    el.innerHTML = (latest.courts || []).map(c => {
-      const p1name = isHome ? c.home_player1 : c.away_player1;
-      const p2name = isHome ? c.home_player2 : c.away_player2;
-      const r1     = isHome ? c.home_rating1  : c.away_rating1;
-      const r2     = isHome ? c.home_rating2  : c.away_rating2;
-      const combined = ((r1 || 0) + (r2 || 0)).toFixed(2);
-      const p1 = byName[(p1name || '').toLowerCase()];
-      const p2 = byName[(p2name || '').toLowerCase()];
-      const stats = pairingStats(p1name, p2name);
+    // Sort by frequency descending, take top 5
+    const topPairings = Object.values(pairMap)
+      .sort((a, b) => b.freq - a.freq)
+      .slice(0, 5);
 
-      // Opponent side
-      const o1name = isHome ? c.away_player1 : c.home_player1;
-      const o2name = isHome ? c.away_player2 : c.home_player2;
-      const or1    = isHome ? c.away_rating1  : c.home_rating1;
-      const or2    = isHome ? c.away_rating2  : c.home_rating2;
-      const oppCombined = ((or1 || 0) + (or2 || 0)).toFixed(2);
-      const oppLabel = [o1name, o2name].filter(Boolean).map(n => lastName(n)).join(' & ');
+    if (!topPairings.length) {
+      el.innerHTML = '<div style="color:var(--text-dim);font-size:13px;padding:12px 0">No court data available.</div>';
+      return;
+    }
+
+    el.innerHTML = topPairings.map(pa => {
+      const isDoubles = pa.display.length === 2;
+      const n1 = pa.display[0];
+      const n2 = isDoubles ? pa.display[1] : null;
+      const p1 = byName[(n1 || '').toLowerCase()];
+      const p2 = n2 ? byName[(n2 || '').toLowerCase()] : null;
+      const combined = ((pa.r1 || 0) + (pa.r2 || 0)).toFixed(2);
+
+      // Most common court number
+      const topCourt = Object.entries(pa.courtCounts)
+        .sort((a, b) => b[1] - a[1])[0][0];
+
+      const total = pa.wins + pa.losses;
+      const winPctRaw = total ? Math.round(pa.wins / total * 100) : null;
+      const recordCls = pa.wins > pa.losses ? 'green' : pa.wins < pa.losses ? 'red' : '';
+      const winPctCls = winPctRaw != null ? (winPctRaw > 50 ? 'green' : winPctRaw < 50 ? 'red' : '') : '';
 
       return `
         <div class="court-card">
           <div class="court-header">
             <div class="court-label">
-              <div class="court-num">COURT ${c.court_number}</div>
-              <div class="court-players">${p2name ? esc(lastName(p1name)) + ' &amp; ' + esc(lastName(p2name)) : esc(lastName(p1name))}</div>
+              <div class="court-num">COURT ${topCourt}</div>
+              <div class="court-players">${n2 ? esc(lastName(n1)) + ' &amp; ' + esc(lastName(n2)) : esc(lastName(n1))}</div>
             </div>
             <div class="court-right">
               <div class="combined-rating">${combined}</div>
-              <div class="combined-label">${p2name ? 'Combined Dynamic' : 'Dynamic Rating'}</div>
+              <div class="combined-label">${isDoubles ? 'Combined Dynamic' : 'Dynamic Rating'}</div>
             </div>
           </div>
           <div class="court-body">
-            ${playerRow(p1name, r1, p1)}
-            ${p2name ? playerRow(p2name, r2, p2) : ''}
-          </div>
-          <div style="padding:0 16px">
-            <div style="display:flex;align-items:center;gap:8px;padding:4px 0">
-              <div style="flex:1;height:1px;background:var(--divider)"></div>
-              <div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim)">vs ${esc(oppLabel)}</div>
-              <div style="font-size:12px;color:var(--text-secondary)">${oppCombined}</div>
-              <div style="flex:1;height:1px;background:var(--divider)"></div>
-            </div>
-          </div>
-          <div class="court-body" style="padding-top:8px">
-            ${playerRow(o1name, or1, null)}
-            ${o2name ? playerRow(o2name, or2, null) : ''}
+            ${playerRow(n1, pa.r1, p1)}
+            ${n2 ? playerRow(n2, pa.r2, p2) : ''}
           </div>
           <div class="court-stats">
             <div class="court-stat">
-              <div class="cs-num ${stats.recordCls}">${stats.record}</div>
+              <div class="cs-num ${recordCls}">${pa.wins}-${pa.losses}</div>
               <div class="cs-label">Record</div>
             </div>
             <div class="court-stat">
-              <div class="cs-num ${stats.winPctCls}">${stats.winPct}</div>
+              <div class="cs-num ${winPctCls}">${winPctRaw != null ? winPctRaw + '%' : '--'}</div>
               <div class="cs-label">Win Rate</div>
             </div>
             <div class="court-stat">
-              <div class="cs-num ${stats.streakType === 'W' ? 'green' : stats.streakType === 'L' ? 'red' : ''}">${stats.streak}</div>
+              <div class="cs-num ${pa.streakType === 'W' ? 'green' : pa.streakType === 'L' ? 'red' : ''}">${pa.streakType ? pa.streakType + pa.streak : '--'}</div>
               <div class="cs-label">Streak</div>
+            </div>
+            <div class="court-stat">
+              <div class="cs-num" style="color:var(--gold)">${pa.freq}</div>
+              <div class="cs-label">Played</div>
             </div>
           </div>
         </div>`;
     }).join('');
-
-    // Detect stacking pattern
-    renderStackAlert(latest.courts, isHome);
   }
 
 
