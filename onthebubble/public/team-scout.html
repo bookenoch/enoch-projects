@@ -1287,7 +1287,7 @@
         <div class="ps-court-row">
           <div class="ps-court-label">Court ${c.court_number}</div>
           <div class="ps-pairing">${esc(ourPair)}</div>
-          <div class="ps-score ${scoreCls}">${scoreStr.split(/\s+/).filter(Boolean).map(s => '<span class="set">' + esc(s) + '</span>').join('')}</div>
+          <div class="ps-score ${scoreCls}">${(() => { const sets = scoreStr.split(/\s+/).filter(Boolean); while (sets.length < 3) sets.unshift(''); return sets.map(s => '<span class="set">' + esc(s) + '</span>').join(''); })()}</div>
         </div>`;
     }).join('');
 
