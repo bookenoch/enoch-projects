@@ -22,6 +22,8 @@
     --green-dim: rgba(76, 175, 125, 0.10);
     --red: #E05555;
     --red-dim: rgba(224, 85, 85, 0.10);
+    --blue: #6AAEE6;
+    --blue-dim: rgba(106, 174, 230, 0.10);
     --yellow: #E5A025;
     --yellow-dim: rgba(229, 160, 37, 0.10);
     --divider: #1C1C1C;
@@ -250,9 +252,9 @@
     border: 1px solid rgba(224,85,85,0.2);
   }
   .bubble-tag.down {
-    background: rgba(100, 160, 230, 0.10);
-    color: #6AAEE6;
-    border: 1px solid rgba(100, 160, 230, 0.30);
+    background: var(--blue-dim);
+    color: var(--blue);
+    border: 1px solid rgba(106, 174, 230, 0.30);
   }
   .bubble-tag.none {
     background: var(--surface-3);
@@ -348,7 +350,7 @@
   };
 
   const BUBBLE_CLASS = { risk: 'risk', risk_down: 'down', on_bubble: 'high', safe: 'safe' };
-  const BUBBLE_LABEL = { risk: 'Bump Up Risk', risk_down: 'Bump Down Risk', on_bubble: 'On Bubble', safe: 'Safe' };
+  const BUBBLE_LABEL = { risk: 'Bump Up Risk', risk_down: 'Bump Down Risk', on_bubble: 'On The Bubble', safe: 'Safe' };
 
   let activeRegion = 'all';
   let currentPlayers = [];
@@ -426,9 +428,16 @@
     const label = BUBBLE_LABEL[p.bubble_status] || 'No Data';
     const rating = p.dynamic_rating != null ? Number(p.dynamic_rating).toFixed(2) : '--';
     const dynColor = (p.ntrp && p.dynamic_rating)
-      ? (p.dynamic_rating >= p.ntrp - 0.05 ? 'var(--red)' : p.dynamic_rating <= (p.ntrp - 0.5) + 0.05 ? '#6AAEE6' : 'var(--green)')
+      ? (p.dynamic_rating >= p.ntrp - 0.05 ? 'var(--red)' : p.dynamic_rating <= (p.ntrp - 0.5) + 0.05 ? 'var(--blue)' : 'var(--green)')
       : 'var(--text-primary)';
-    const parts = [p.location, p.gender].filter(Boolean);
+
+    const ntrpLabel = p.ntrp ? Number(p.ntrp).toFixed(1) : '';
+    const subParts = [ntrpLabel, p.location, p.gender].filter(Boolean);
+
+    const w = p.wins || 0;
+    const l = p.losses || 0;
+    const hasRecord = w > 0 || l > 0;
+    const recColor = hasRecord ? (w > l ? 'var(--green)' : w < l ? 'var(--red)' : 'var(--text-primary)') : '';
 
     return `
     <div class="result-row" onclick="location.href='player-card.html?id=${p.id}'">
@@ -436,7 +445,7 @@
         <div class="result-avatar">${esc(initials)}</div>
         <div class="result-info">
           <div class="result-name">${esc(p.name)}</div>
-          <div class="result-sub">${esc(parts.join(' \u2022 '))}</div>
+          <div class="result-sub">${esc(subParts.join(' \u2022 '))}${hasRecord ? ' <span style="color:' + recColor + '">\u2022 ' + w + '-' + l + '</span>' : ''}</div>
         </div>
       </div>
       <div class="result-right">
