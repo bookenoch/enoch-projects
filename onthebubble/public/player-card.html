@@ -481,7 +481,7 @@ function renderCard(p, courts) {
   const s = p.stats || {};
   const status = p.bubble_status || 'safe';
 
-  const badgeLabel = status === 'risk' ? 'Bump Up Risk' : status === 'risk_down' ? 'Bump Down Risk' : status === 'on_bubble' ? 'On The Bubble' : 'Safe';
+  const badgeLabel = status === 'risk' ? 'Bump Up Notice' : status === 'risk_down' ? 'Bump Down Risk' : status === 'on_bubble' ? 'On The Bubble' : 'Safe';
   const ntrp = p.ntrp ? p.ntrp.toFixed(1) : '—';
   const dynRating = p.dynamic_rating ? p.dynamic_rating.toFixed(2) : '—';
   // Dynamic rating color: red = near bump up, blue = near bump down, green = safe
