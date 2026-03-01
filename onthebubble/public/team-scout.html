@@ -1151,6 +1151,11 @@
           </div>
         </div>`;
     }).join('');
+
+    // Stacking alert based on most recent match
+    const latest = matches[0];
+    const isHome = latest.home_team === teamName;
+    renderStackAlert(latest.courts, isHome);
   }
 
 
