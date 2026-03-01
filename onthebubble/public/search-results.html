@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OnTheBubble — Search Results</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #BCB43E;
+    --gold-dim: rgba(188, 180, 62, 0.10);
+    --gold-mid: rgba(188, 180, 62, 0.30);
+    --bg: #0D0D0D;
+    --card: #111111;
+    --card-border: #1A1A1A;
+    --surface-2: #161616;
+    --surface-3: #1C1C1C;
+    --text-primary: #F0F0F0;
+    --text-secondary: #888;
+    --text-dim: #444;
+    --green: #4CAF7D;
+    --green-dim: rgba(76, 175, 125, 0.10);
+    --red: #E05555;
+    --red-dim: rgba(224, 85, 85, 0.10);
+    --yellow: #E5A025;
+    --yellow-dim: rgba(229, 160, 37, 0.10);
+    --divider: #1C1C1C;
+    --radius: 14px;
+    --radius-sm: 8px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+    min-height: 100vh;
+    padding: 24px 16px 60px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* NAV */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+  }
+  .logo span { color: var(--text-secondary); }
+
+  /* SEARCH BAR */
+  .search-wrap {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    color: var(--text-dim);
+  }
+  .search-icon svg { width: 15px; height: 15px; stroke: currentColor; }
+  .search-input {
+    width: 100%;
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-sm);
+    padding: 15px 16px 15px 44px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: var(--text-primary);
+    outline: none;
+  }
+  .search-input::placeholder { color: var(--text-dim); }
+  .clear-btn {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; height: 20px;
+    background: var(--surface-3);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    font-size: 10px;
+    color: var(--text-secondary);
+  }
+
+  /* RESULTS HEADER */
+  .results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+  }
+  .results-count {
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+  .results-count strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  /* REGION FILTER PILLS */
+  .filter-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+  .filter-scroll::-webkit-scrollbar { display: none; }
+  .filter-pills {
+    display: flex;
+    gap: 6px;
+    width: max-content;
+  }
+  .pill {
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    border: 1px solid var(--divider);
+    color: var(--text-secondary);
+    background: transparent;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .pill.active {
+    background: var(--gold-dim);
+    border-color: var(--gold-mid);
+    color: var(--gold);
+  }
+  .pill:hover:not(.active) {
+    border-color: #333;
+    color: var(--text-primary);
+  }
+
+  /* RESULT ROWS */
+  .results-list { }
+
+  .result-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--divider);
+    cursor: pointer;
+    transition: opacity 0.15s;
+  }
+  .result-row:first-child { border-top: 1px solid var(--divider); }
+  .result-row:active { opacity: 0.7; }
+  .result-row.highlighted {
+    background: var(--gold-dim);
+    margin: 0 -16px;
+    padding: 18px 16px;
+    border-bottom: 1px solid var(--gold-mid);
+    border-top: 1px solid var(--gold-mid);
+  }
+
+  .result-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+  }
+
+  .result-avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--surface-3);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+  }
+  .result-avatar.gold {
+    background: var(--gold-dim);
+    color: var(--gold);
+    border: 1px solid var(--gold-mid);
+  }
+
+  .result-info { flex: 1; }
+  .result-name {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.2;
+  }
+  .result-row.highlighted .result-name { color: var(--gold); }
+  .result-sub {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 3px;
+  }
+
+  .result-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    flex-shrink: 0;
+    padding-left: 12px;
+  }
+  .result-rating {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    color: var(--text-primary);
+    line-height: 1;
+  }
+  .result-row.highlighted .result-rating { color: var(--gold); }
+
+  /* Bubble indicator */
+  .bubble-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 20px;
+  }
+  .bubble-tag.high {
+    background: var(--gold-dim);
+    color: var(--gold);
+    border: 1px solid var(--gold-mid);
+  }
+  .bubble-tag.safe {
+    background: var(--green-dim);
+    color: var(--green);
+    border: 1px solid rgba(76,175,125,0.2);
+  }
+  .bubble-tag.risk {
+    background: var(--red-dim);
+    color: var(--red);
+    border: 1px solid rgba(224,85,85,0.2);
+  }
+  .bubble-tag.down {
+    background: rgba(100, 160, 230, 0.10);
+    color: #6AAEE6;
+    border: 1px solid rgba(100, 160, 230, 0.30);
+  }
+  .bubble-tag.none {
+    background: var(--surface-3);
+    color: var(--text-dim);
+    border: 1px solid transparent;
+  }
+
+  /* Chevron */
+  .chevron {
+    color: var(--text-dim);
+    margin-left: 8px;
+    flex-shrink: 0;
+  }
+  .chevron svg { width: 14px; height: 14px; stroke: currentColor; }
+
+  /* No results */
+  .no-results {
+    text-align: center;
+    padding: 48px 0;
+    display: none;
+  }
+  .no-results.visible { display: block; }
+  .no-results-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .no-results-sub {
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+</style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <div class="nav">
+    <div class="logo" onclick="location.href='index.html'" style="cursor:pointer">OnThe<span>Bubble</span></div>
+    <div style="font-size:12px; color:var(--text-secondary); cursor:pointer; display:flex; align-items:center; gap:4px" onclick="history.back()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> Back</div>
+  </div>
+
+  <!-- SEARCH BAR -->
+  <div class="search-wrap">
+    <div class="search-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+    </div>
+    <input class="search-input" type="text" id="searchInput" placeholder="Search player name…" oninput="filterResults()" />
+    <div class="clear-btn" onclick="clearSearch()"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+  </div>
+
+  <!-- RESULTS HEADER -->
+  <div class="results-header">
+    <div class="results-count"><strong id="countLabel">0</strong> players found</div>
+  </div>
+
+  <!-- REGION FILTER PILLS -->
+  <div class="filter-scroll">
+    <div class="filter-pills">
+      <div class="pill active" onclick="filterRegion('all', this)">All</div>
+      <div class="pill" onclick="filterRegion('midwest', this)">Midwest</div>
+      <div class="pill" onclick="filterRegion('eastern', this)">Eastern</div>
+      <div class="pill" onclick="filterRegion('southern', this)">Southern</div>
+      <div class="pill" onclick="filterRegion('florida', this)">Florida</div>
+      <div class="pill" onclick="filterRegion('california', this)">California</div>
+      <div class="pill" onclick="filterRegion('texas', this)">Texas</div>
+      <div class="pill" onclick="filterRegion('missouri', this)">Missouri Valley</div>
+    </div>
+  </div>
+
+  <!-- RESULTS LIST -->
+  <div class="results-list" id="resultsList"></div>
+
+  <!-- NO RESULTS -->
+  <div class="no-results" id="noResults">
+    <div class="no-results-title">No players found</div>
+    <div class="no-results-sub">Try a different name or region</div>
+  </div>
+
+<script>
+  // Pill key → section value stored in DB
+  const SECTION_MAP = {
+    midwest:    'Midwest',
+    eastern:    'Eastern',
+    southern:   'Southern',
+    florida:    'Florida',
+    california: ['So. California', 'No. California'],
+    texas:      'Texas',
+    missouri:   'Missouri Valley',
+  };
+
+  const BUBBLE_CLASS = { risk: 'risk', risk_down: 'down', on_bubble: 'high', safe: 'safe' };
+  const BUBBLE_LABEL = { risk: 'Bump Up Risk', risk_down: 'Bump Down Risk', on_bubble: 'On Bubble', safe: 'Safe' };
+
+  let activeRegion = 'all';
+  let currentPlayers = [];
+  let debounceTimer = null;
+
+  // ── Init ──────────────────────────────────────────────
+  const params = new URLSearchParams(location.search);
+  const initial = params.get('q') || '';
+  const input = document.getElementById('searchInput');
+  input.value = initial;
+  if (initial) fetchPlayers(initial);
+
+  // ── API ───────────────────────────────────────────────
+  async function fetchPlayers(q) {
+    if (!q.trim()) {
+      currentPlayers = [];
+      render([]);
+      return;
+    }
+    try {
+      const res = await fetch('/api/players/search?q=' + encodeURIComponent(q));
+      currentPlayers = await res.json();
+    } catch (e) {
+      currentPlayers = [];
+    }
+    render(applyRegionFilter(currentPlayers));
+  }
+
+  // ── Filtering ─────────────────────────────────────────
+  function applyRegionFilter(players) {
+    if (activeRegion === 'all') return players;
+    const target = SECTION_MAP[activeRegion];
+    return players.filter(p => {
+      if (!p.section) return false;
+      return Array.isArray(target)
+        ? target.some(t => p.section.includes(t))
+        : p.section === target;
+    });
+  }
+
+  function filterRegion(region, el) {
+    activeRegion = region;
+    document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+    el.classList.add('active');
+    render(applyRegionFilter(currentPlayers));
+  }
+
+  // ── Search input handlers ─────────────────────────────
+  function filterResults() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => {
+      const q = input.value;
+      history.replaceState(null, '', q ? '?q=' + encodeURIComponent(q) : location.pathname);
+      fetchPlayers(q);
+    }, 250);
+  }
+
+  function clearSearch() {
+    input.value = '';
+    history.replaceState(null, '', location.pathname);
+    fetchPlayers('');
+  }
+
+  // ── Render ────────────────────────────────────────────
+  function render(players) {
+    const list = document.getElementById('resultsList');
+    document.getElementById('countLabel').textContent = players.length;
+    document.getElementById('noResults').classList.toggle('visible', players.length === 0);
+    list.innerHTML = players.map(playerRow).join('');
+  }
+
+  function playerRow(p) {
+    const initials = p.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
+    const cls   = BUBBLE_CLASS[p.bubble_status] || 'none';
+    const label = BUBBLE_LABEL[p.bubble_status] || 'No Data';
+    const rating = p.dynamic_rating != null ? Number(p.dynamic_rating).toFixed(2) : '--';
+    const dynColor = (p.ntrp && p.dynamic_rating)
+      ? (p.dynamic_rating >= p.ntrp - 0.05 ? 'var(--red)' : p.dynamic_rating <= (p.ntrp - 0.5) + 0.05 ? '#6AAEE6' : 'var(--green)')
+      : 'var(--text-primary)';
+    const parts = [p.location, p.gender].filter(Boolean);
+
+    return `
+    <div class="result-row" onclick="location.href='player-card.html?id=${p.id}'">
+      <div class="result-left">
+        <div class="result-avatar">${esc(initials)}</div>
+        <div class="result-info">
+          <div class="result-name">${esc(p.name)}</div>
+          <div class="result-sub">${esc(parts.join(' \u2022 '))}</div>
+        </div>
+      </div>
+      <div class="result-right">
+        <div class="result-rating" style="color:${dynColor}">${esc(rating)}</div>
+        <div class="bubble-tag ${cls}">${label}</div>
+      </div>
+      <div class="chevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </div>
+    </div>`;
+  }
+
+  function esc(s) {
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+</script>
+
+</body>
+</html>
