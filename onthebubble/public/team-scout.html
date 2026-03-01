@@ -979,7 +979,7 @@
       const rating = p.dynamic_rating != null ? Number(p.dynamic_rating).toFixed(2) : '--';
       const sub    = [p.location, p.gender, p.ntrp ? 'NTRP ' + p.ntrp : null].filter(Boolean).join(' \u2022 ');
       const dynColor = (p.ntrp && p.dynamic_rating)
-        ? (p.dynamic_rating >= p.ntrp - 0.05 ? 'var(--red)' : p.dynamic_rating <= (p.ntrp - 0.5) + 0.05 ? '#6AAEE6' : 'var(--green)')
+        ? (p.dynamic_rating >= p.ntrp - 0.05 ? 'var(--red)' : p.dynamic_rating <= (p.ntrp - 0.5) + 0.05 ? 'var(--yellow)' : 'var(--green)')
         : 'var(--text-primary)';
       const rec = calcTeamRecord(p.name, matches);
       return `
@@ -1033,7 +1033,7 @@
       const href = p ? `player-card.html?id=${p.id}` : (name ? `player-card.html?name=${encodeURIComponent(name)}` : null);
       const click = href ? `style="cursor:pointer" onclick="location.href='${href}'"` : '';
       const pDynColor = (p?.ntrp && rating)
-        ? (rating >= p.ntrp - 0.05 ? 'var(--red)' : rating <= (p.ntrp - 0.5) + 0.05 ? '#6AAEE6' : 'var(--green)')
+        ? (rating >= p.ntrp - 0.05 ? 'var(--red)' : rating <= (p.ntrp - 0.5) + 0.05 ? 'var(--yellow)' : 'var(--green)')
         : 'var(--text-primary)';
       return `
         <div class="player-row" ${click}>

@@ -110,9 +110,9 @@
     color: var(--red);
   }
   .bubble-badge.risk_down {
-    background: rgba(100, 160, 230, 0.12);
-    border: 1px solid rgba(100, 160, 230, 0.35);
-    color: #6AAEE6;
+    background: var(--yellow-dim);
+    border: 1px solid rgba(229, 160, 37, 0.35);
+    color: var(--yellow);
   }
   .bubble-badge.on_bubble {
     background: var(--gold-dim);
@@ -130,7 +130,7 @@
     animation: pulse 2s ease infinite;
   }
   .risk .bubble-dot      { background: var(--red); }
-  .risk_down .bubble-dot { background: #6AAEE6; }
+  .risk_down .bubble-dot { background: var(--yellow); }
   .on_bubble .bubble-dot { background: var(--gold); }
   .safe .bubble-dot      { background: var(--green); }
 
@@ -486,7 +486,7 @@ function renderCard(p, courts) {
   const dynRating = p.dynamic_rating ? p.dynamic_rating.toFixed(2) : '—';
   // Dynamic rating color: red = near bump up, blue = near bump down, green = safe
   const dynColor = (p.ntrp && p.dynamic_rating)
-    ? (p.dynamic_rating >= p.ntrp - 0.05 ? 'var(--red)' : p.dynamic_rating <= (p.ntrp - 0.5) + 0.05 ? '#6AAEE6' : 'var(--green)')
+    ? (p.dynamic_rating >= p.ntrp - 0.05 ? 'var(--red)' : p.dynamic_rating <= (p.ntrp - 0.5) + 0.05 ? 'var(--yellow)' : 'var(--green)')
     : 'var(--text-primary)';
 
   const meterPct = bubblePct(p.ntrp, p.dynamic_rating);
@@ -589,7 +589,7 @@ function renderCard(p, courts) {
           <div class="rating-label">On The<br>Bubble</div>
           <div class="rating-value" style="color:${
             status==='risk'      ? 'var(--red)'   :
-            status==='risk_down' ? '#6AAEE6'      :
+            status==='risk_down' ? 'var(--yellow)'      :
             status==='on_bubble' ? 'var(--gold)'  : 'var(--green)'
           }">${
             status==='risk'      ? 'HIGH <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>' :
@@ -600,7 +600,7 @@ function renderCard(p, courts) {
             status==='risk'      ? 'bad'  :
             status==='risk_down' ? ''     :
             status==='on_bubble' ? 'warn' : 'up'
-          }" style="white-space:nowrap;${status==='risk_down'?'color:#6AAEE6':''}">${
+          }" style="white-space:nowrap;${status==='risk_down'?'color:var(--yellow)':''}">${
             status==='risk'      ? '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Bump up'   :
             status==='risk_down' ? '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg> Bump down'  :
             status==='on_bubble' ? '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> Monitor closely' : '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> In range'
@@ -615,12 +615,12 @@ function renderCard(p, courts) {
       <div class="meter-track">
         <div class="meter-fill" style="width:${meterPct}%;background:${
           meterPct >= 90 ? 'linear-gradient(90deg,var(--gold),var(--red))' :
-          meterPct <= 10 ? 'linear-gradient(90deg,#6AAEE6,#6AAEE6)' :
+          meterPct <= 10 ? 'linear-gradient(90deg,var(--yellow),var(--yellow))' :
           'linear-gradient(90deg,var(--green),var(--gold))'
         }">
           <div class="meter-marker" style="background:${
             meterPct >= 90 ? 'var(--red)' :
-            meterPct <= 10 ? '#6AAEE6'   : 'var(--gold)'
+            meterPct <= 10 ? 'var(--yellow)'   : 'var(--gold)'
           };box-shadow:0 0 10px ${
             meterPct >= 90 ? 'rgba(224,85,85,0.5)' :
             meterPct <= 10 ? 'rgba(106,174,230,0.5)' : 'rgba(188,180,62,0.5)'
