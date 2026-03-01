@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bump Day — by OnTheBubble</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #BCB43E;
+    --gold-dim: rgba(188, 180, 62, 0.10);
+    --gold-mid: rgba(188, 180, 62, 0.30);
+    --bg: #0D0D0D;
+    --card: #111111;
+    --card-border: #1A1A1A;
+    --surface-3: #1C1C1C;
+    --text-primary: #F0F0F0;
+    --text-secondary: #888;
+    --text-dim: #444;
+    --green: #4CAF7D;
+    --green-dim: rgba(76, 175, 125, 0.07);
+    --green-mid: rgba(76, 175, 125, 0.20);
+    --red: #E05555;
+    --red-dim: rgba(224, 85, 85, 0.07);
+    --red-mid: rgba(224, 85, 85, 0.20);
+    --divider: #1C1C1C;
+    --radius-sm: 8px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+    min-height: 100vh;
+    padding: 24px 16px 60px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* NAV */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+  }
+  .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+  }
+  .logo span { color: var(--text-secondary); }
+
+  /* PAGE HEADER */
+  .page-header {
+    margin-bottom: 28px;
+    animation: fadeUp 0.5s ease both;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .page-eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .page-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    color: var(--text-primary);
+  }
+  .page-sub {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 6px;
+  }
+  .page-sub strong { color: var(--text-primary); font-weight: 600; }
+
+  /* DISTRICT TOGGLE */
+  .district-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--divider);
+  }
+  .district-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .district-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+  .district-name svg { width: 12px; height: 12px; stroke: currentColor; }
+
+  /* SUMMARY PILLS */
+  .summary-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+  .summary-pill {
+    flex: 1;
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    text-align: center;
+  }
+  .summary-pill.up {
+    background: var(--green-dim);
+    border: 1px solid var(--green-mid);
+  }
+  .summary-pill.down {
+    background: var(--red-dim);
+    border: 1px solid var(--red-mid);
+  }
+  .summary-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    line-height: 1;
+  }
+  .summary-pill.up .summary-num { color: var(--green); }
+  .summary-pill.down .summary-num { color: var(--red); }
+  .summary-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 3px;
+  }
+  .summary-pill.up .summary-label { color: var(--green); opacity: 0.7; }
+  .summary-pill.down .summary-label { color: var(--red); opacity: 0.7; }
+
+  /* SECTION HEADERS */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+  .section-title {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .section-title.up { color: var(--green); }
+  .section-title.down { color: var(--red); }
+  .section-line {
+    flex: 1;
+    height: 1px;
+  }
+  .section-line.up { background: var(--green-mid); }
+  .section-line.down { background: var(--red-mid); }
+
+  /* RESULT ROWS */
+  .result-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 0;
+    border-bottom: 1px solid var(--divider);
+    cursor: pointer;
+    transition: opacity 0.15s;
+  }
+  .result-row:active { opacity: 0.7; }
+
+  .result-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+  }
+  .result-avatar {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: var(--surface-3);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 15px;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+  }
+  .result-avatar.up {
+    background: var(--green-dim);
+    color: var(--green);
+    border: 1px solid var(--green-mid);
+  }
+  .result-avatar.down {
+    background: var(--red-dim);
+    color: var(--red);
+    border: 1px solid var(--red-mid);
+  }
+  .result-info { flex: 1; }
+  .result-name {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.2;
+  }
+  .result-sub {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 3px;
+  }
+
+  .result-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    flex-shrink: 0;
+    padding-left: 12px;
+  }
+
+  /* Rating change */
+  .rating-change {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .old-ntrp {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    color: var(--text-dim);
+    line-height: 1;
+  }
+  .arrow {
+    font-size: 11px;
+  }
+  .arrow.up { color: var(--green); }
+  .arrow.down { color: var(--red); }
+  .new-ntrp {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    line-height: 1;
+  }
+  .new-ntrp.up { color: var(--green); }
+  .new-ntrp.down { color: var(--red); }
+
+  .dyn-rating {
+    font-size: 13px;
+    color: var(--text-secondary);
+    text-align: right;
+  }
+
+  /* Chevron */
+  .chevron { color: var(--text-dim); margin-left: 8px; flex-shrink: 0; }
+  .chevron svg { width: 14px; height: 14px; stroke: currentColor; }
+
+  /* Spacer between sections */
+  .section-spacer { margin-bottom: 24px; }
+  .section-gap { margin-top: 32px; }
+
+</style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <div class="nav">
+    <div class="logo" onclick="location.href='index.html'" style="cursor:pointer">OnThe<span>Bubble</span></div>
+    <div style="font-size:12px; color:var(--text-secondary); cursor:pointer; display:flex; align-items:center; gap:4px" onclick="history.back()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> Back</div>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="page-eyebrow">Annual Ratings Release</div>
+    <div class="page-title">Bump Day</div>
+    <div class="page-sub"><strong>Northeastern Ohio</strong> · 2025 Ratings Update · 187 players affected</div>
+  </div>
+
+  <!-- DISTRICT -->
+  <div class="district-row">
+    <div class="district-label">District</div>
+    <div class="district-name">
+      Northeastern Ohio
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="summary-row">
+    <div class="summary-pill up">
+      <div class="summary-num">94</div>
+      <div class="summary-label">Bumped Up</div>
+    </div>
+    <div class="summary-pill down">
+      <div class="summary-num">93</div>
+      <div class="summary-label">Bumped Down</div>
+    </div>
+  </div>
+
+  <!-- MOVING UP -->
+  <div class="section-spacer">
+    <div class="section-header">
+      <div class="section-title up">Moving Up</div>
+      <div class="section-line up"></div>
+    </div>
+  </div>
+
+  <div class="result-row">
+    <div class="result-left">
+      <div class="result-avatar up">PN</div>
+      <div class="result-info">
+        <div class="result-name">Phong Nguyen</div>
+        <div class="result-sub">M · Mentor, OH · NEOTA</div>
+      </div>
+    </div>
+    <div class="result-right">
+      <div class="rating-change">
+        <div class="old-ntrp">4.0</div>
+        <div class="arrow up"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        <div class="new-ntrp up">4.5</div>
+      </div>
+      <div class="dyn-rating">Dynamic 3.97</div>
+    </div>
+    <div class="chevron">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </div>
+  </div>
+
+  <div class="result-row">
+    <div class="result-left">
+      <div class="result-avatar up">JB</div>
+      <div class="result-info">
+        <div class="result-name">Jim Batchik</div>
+        <div class="result-sub">M · Highland Heights, OH · NEOTA</div>
+      </div>
+    </div>
+    <div class="result-right">
+      <div class="rating-change">
+        <div class="old-ntrp">4.0</div>
+        <div class="arrow up"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        <div class="new-ntrp up">4.5</div>
+      </div>
+      <div class="dyn-rating">Dynamic 3.93</div>
+    </div>
+    <div class="chevron">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </div>
+  </div>
+
+  <div class="result-row">
+    <div class="result-left">
+      <div class="result-avatar up">KA</div>
+      <div class="result-info">
+        <div class="result-name">Kathleen Aranavage</div>
+        <div class="result-sub">F · Willoughby, OH · NEOTA</div>
+      </div>
+    </div>
+    <div class="result-right">
+      <div class="rating-change">
+        <div class="old-ntrp">3.5</div>
+        <div class="arrow up"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        <div class="new-ntrp up">4.0</div>
+      </div>
+      <div class="dyn-rating">Dynamic 3.61</div>
+    </div>
+    <div class="chevron">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </div>
+  </div>
+
+  <div class="result-row">
+    <div class="result-left">
+      <div class="result-avatar up">EC</div>
+      <div class="result-info">
+        <div class="result-name">Eileen Connell</div>
+        <div class="result-sub">F · Cleveland, OH · NEOTA</div>
+      </div>
+    </div>
+    <div class="result-right">
+      <div class="rating-change">
+        <div class="old-ntrp">3.5</div>
+        <div class="arrow up"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        <div class="new-ntrp up">4.0</div>
+      </div>
+      <div class="dyn-rating">Dynamic 3.58</div>
+    </div>
+    <div class="chevron">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </div>
+  </div>
+
+  <div class="result-row">
+    <div class="result-left">
+      <div class="result-avatar up">GF</div>
+      <div class="result-info">
+        <div class="result-name">Gary Fleming</div>
+        <div class="result-sub">M · Mentor, OH · NEOTA</div>
+      </div>
+    </div>
+    <div class="result-right">
+      <div class="rating-change">
+        <div class="old-ntrp">3.5</div>
+        <div class="arrow up"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        <div class="new-ntrp up">4.0</div>
+      </div>
+      <div class="dyn-rating">Dynamic 3.57</div>
+    </div>
+    <div class="chevron">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </div>
+  </div>
+
+  <div class="result-row">
+    <div class="result-left">
+      <div class="result-avatar up">VN</div>
+      <div class="result-info">
+        <div class="result-name">Vu Nguyen</div>
+        <div class="result-sub">M · Kent, OH · NEOTA</div>
+      </div>
+    </div>
+    <div class="result-right">
+      <div class="rating-change">
+        <div class="old-ntrp">3.5</div>
+        <div class="arrow up"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        <div class="new-ntrp up">4.0</div>
+      </div>
+      <div class="dyn-rating">Dynamic 3.55</div>
+    </div>
+    <div class="chevron">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </div>
+  </div>
+
+  <!-- MOVING DOWN -->
+  <div class="section-gap">
+    <div class="section-header">
+      <div class="section-title down">Moving Down</div>
+      <div class="section-line down"></div>
+    </div>
+  </div>
+
+  <div class="result-row">
+    <div class="result-left">
+      <div class="result-avatar down">RD</div>
+      <div class="result-info">
+        <div class="result-name">Rebecca Drenovsky</div>
+        <div class="result-sub">F · Cleveland Heights, OH · NEOTA</div>
+      </div>
+    </div>
+    <div class="result-right">
+      <div class="rating-change">
+        <div class="old-ntrp">3.5</div>
+        <div class="arrow down"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        <div class="new-ntrp down">3.0</div>
+      </div>
+      <div class="dyn-rating">Dynamic 2.96</div>
+    </div>
+    <div class="chevron">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </div>
+  </div>
+
+  <div class="result-row">
+    <div class="result-left">
+      <div class="result-avatar down">DH</div>
+      <div class="result-info">
+        <div class="result-name">Denise Hwang</div>
+        <div class="result-sub">F · Cleveland, OH · NEOTA</div>
+      </div>
+    </div>
+    <div class="result-right">
+      <div class="rating-change">
+        <div class="old-ntrp">3.5</div>
+        <div class="arrow down"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        <div class="new-ntrp down">3.0</div>
+      </div>
+      <div class="dyn-rating">Dynamic 3.10</div>
+    </div>
+    <div class="chevron">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </div>
+  </div>
+
+  <div class="result-row">
+    <div class="result-left">
+      <div class="result-avatar down">PS</div>
+      <div class="result-info">
+        <div class="result-name">Patrick Smith</div>
+        <div class="result-sub">M · Cleveland, OH · NEOTA</div>
+      </div>
+    </div>
+    <div class="result-right">
+      <div class="rating-change">
+        <div class="old-ntrp">3.5</div>
+        <div class="arrow down"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        <div class="new-ntrp down">3.0</div>
+      </div>
+      <div class="dyn-rating">Dynamic 3.41</div>
+    </div>
+    <div class="chevron">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </div>
+  </div>
+
+  <div class="result-row">
+    <div class="result-left">
+      <div class="result-avatar down">LB</div>
+      <div class="result-info">
+        <div class="result-name">Liza Brady</div>
+        <div class="result-sub">F · Cleveland, OH · NEOTA</div>
+      </div>
+    </div>
+    <div class="result-right">
+      <div class="rating-change">
+        <div class="old-ntrp">3.5</div>
+        <div class="arrow down"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        <div class="new-ntrp down">3.0</div>
+      </div>
+      <div class="dyn-rating">Dynamic 3.32</div>
+    </div>
+    <div class="chevron">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </div>
+  </div>
+
+  <div class="result-row">
+    <div class="result-left">
+      <div class="result-avatar down">DF</div>
+      <div class="result-info">
+        <div class="result-name">Donna Fleming</div>
+        <div class="result-sub">F · Mentor, OH · NEOTA</div>
+      </div>
+    </div>
+    <div class="result-right">
+      <div class="rating-change">
+        <div class="old-ntrp">3.5</div>
+        <div class="arrow down"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        <div class="new-ntrp down">3.0</div>
+      </div>
+      <div class="dyn-rating">Dynamic 3.05</div>
+    </div>
+    <div class="chevron">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OnTheBubble — Player Card</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #BCB43E;
+    --gold-dim: rgba(188, 180, 62, 0.12);
+    --gold-mid: rgba(188, 180, 62, 0.35);
+    --bg: #0D0D0D;
+    --surface-1: #161616;
+    --surface-2: #1E1E1E;
+    --surface-3: #272727;
+    --text-primary: #F0F0F0;
+    --text-secondary: #888;
+    --text-dim: #555;
+    --green: #4CAF7D;
+    --red: #E05555;
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 24px 16px 60px;
+  }
+
+  /* NAV */
+  .nav {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+  }
+  .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    cursor: pointer;
+  }
+  .logo span { color: var(--text-secondary); }
+  .back-btn {
+    width: 36px; height: 36px;
+    background: var(--surface-2);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+  }
+  .back-btn svg { width: 16px; height: 16px; stroke: var(--text-secondary); }
+
+  /* CARD */
+  .card {
+    width: 100%;
+    max-width: 420px;
+    background: #111111;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid #1A1A1A;
+    animation: fadeUp 0.5s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* CARD HEADER */
+  .card-header {
+    background: transparent;
+    padding: 24px 24px 20px;
+    position: relative;
+    border-bottom: 1px solid #1C1C1C;
+  }
+
+  .bubble-badge {
+    position: absolute;
+    top: 28px; right: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .bubble-badge.risk {
+    background: rgba(224, 85, 85, 0.12);
+    border: 1px solid rgba(224, 85, 85, 0.35);
+    color: var(--red);
+  }
+  .bubble-badge.risk_down {
+    background: rgba(100, 160, 230, 0.12);
+    border: 1px solid rgba(100, 160, 230, 0.35);
+    color: #6AAEE6;
+  }
+  .bubble-badge.on_bubble {
+    background: var(--gold-dim);
+    border: 1px solid var(--gold-mid);
+    color: var(--gold);
+  }
+  .bubble-badge.safe {
+    background: rgba(76, 175, 125, 0.1);
+    border: 1px solid rgba(76, 175, 125, 0.3);
+    color: var(--green);
+  }
+  .bubble-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    animation: pulse 2s ease infinite;
+  }
+  .risk .bubble-dot      { background: var(--red); }
+  .risk_down .bubble-dot { background: #6AAEE6; }
+  .on_bubble .bubble-dot { background: var(--gold); }
+  .safe .bubble-dot      { background: var(--green); }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.7); }
+  }
+
+  .player-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .avatar {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--surface-3);
+    border: 2px solid #333;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  .player-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    color: var(--text-primary);
+  }
+  .player-sub {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+    font-weight: 400;
+  }
+
+  /* RATING ROW */
+  .rating-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .rating-block {
+    flex: 1;
+    background: var(--surface-3);
+    border-radius: 10px;
+    padding: 15px 14px;
+  }
+  .rating-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+  .rating-value {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    letter-spacing: 0.02em;
+    color: var(--text-primary);
+    line-height: 1;
+  }
+  .rating-value.gold { color: var(--gold); }
+  .rating-sub {
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 3px;
+    color: var(--text-dim);
+  }
+  .rating-sub.up   { color: var(--green); }
+  .rating-sub.warn { color: var(--gold); }
+  .rating-sub.bad  { color: var(--red); }
+
+  /* BUBBLE METER */
+  .bubble-section {
+    padding: 20px 24px;
+    border-bottom: 1px solid #1E1E1E;
+  }
+  .section-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+  }
+  .meter-track {
+    height: 6px;
+    background: var(--surface-3);
+    border-radius: 99px;
+    position: relative;
+    overflow: visible;
+  }
+  .meter-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--green), var(--gold));
+    border-radius: 99px;
+    position: relative;
+    transition: width 1s ease;
+  }
+  .meter-marker {
+    position: absolute;
+    right: -1px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px; height: 14px;
+    background: var(--gold);
+    border-radius: 50%;
+    border: 2px solid var(--bg);
+    box-shadow: 0 0 10px rgba(188, 180, 62, 0.5);
+  }
+  .meter-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+  .meter-labels span {
+    font-size: 10px;
+    color: var(--text-dim);
+  }
+  .meter-labels .active {
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  /* STATS GRID */
+  .stats-section {
+    padding: 20px 24px;
+    border-bottom: 1px solid #1E1E1E;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .stat-cell {
+    background: #1C1C1C;
+    border-radius: 8px;
+    padding: 15px 10px;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    line-height: 1;
+    color: var(--text-primary);
+  }
+  .stat-num.accent { color: var(--gold); }
+  .stat-num.green  { color: var(--green); }
+  .stat-num.red    { color: var(--red); }
+  .stat-desc {
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-top: 4px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* RECENT MATCHES */
+  .matches-section {
+    padding: 20px 24px;
+  }
+  .match-row {
+    padding: 13px 0;
+    border-bottom: 1px solid #191919;
+  }
+  .match-row:last-child { border-bottom: none; }
+  .match-date {
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+    margin-bottom: 2px;
+    padding-left: 40px;
+    text-transform: uppercase;
+  }
+  .match-main {
+    display: flex;
+    align-items: center;
+  }
+  .match-result {
+    width: 28px; height: 28px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+  }
+  .match-result.win  { background: rgba(76, 175, 125, 0.15); color: var(--green); }
+  .match-result.loss { background: rgba(224, 85, 85, 0.12); color: var(--red); }
+  .match-name {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    padding: 0 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .match-score {
+    font-size: 13px;
+    font-weight: 600;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .match-score.win { color: var(--green); }
+  .match-score.loss { color: var(--red); }
+  .match-meta {
+    padding-left: 40px;
+  }
+  .match-meta .opp-date {
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-top: 2px;
+  }
+
+  .empty-state {
+    padding: 24px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="nav">
+    <div class="logo" onclick="location.href='index.html'">OnThe<span>Bubble</span></div>
+    <div class="back-btn" onclick="history.back()">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="card" id="card">
+    <div class="empty-state">Loading...</div>
+  </div>
+
+<script>
+const params = new URLSearchParams(location.search);
+const playerId   = params.get('id');
+const playerName = params.get('name');
+
+async function load() {
+  let player, courts = [];
+
+  try {
+    // Resolve player name first, then always use aggregated profile
+    let name = playerName;
+    if (!name && playerId) {
+      const row = await fetch(`/api/players/${playerId}`).then(r => r.json());
+      name = row?.name;
+    }
+    if (name) {
+      player = await fetch(`/api/players/profile?name=${encodeURIComponent(name)}`).then(r => r.json());
+    }
+  } catch(e) {}
+
+  if (!player) {
+    document.getElementById('card').innerHTML = '<div class="empty-state">Player not found.</div>';
+    return;
+  }
+
+  try {
+    courts = await fetch(`/api/players/courts?name=${encodeURIComponent(player.name)}`).then(r => r.json());
+  } catch(e) {}
+
+  renderCard(player, courts);
+}
+
+function initials(name) {
+  return (name || '').split(' ').map(p => p[0]).join('').slice(0, 2).toUpperCase();
+}
+
+function formatDate(s) {
+  if (!s) return '';
+  const d = new Date(s);
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
+function parseLeague(league) {
+  if (!league) return { line1: '', line2: '' };
+  const s = league.replace(/^\d{4}\s*/, '');
+  // Pattern: {type} {age}+ {section} {district...} {gender} {ntrp}
+  const m = s.match(/^(?:Adult|Mixed)\s+(\d+\+)\s+(.+?)\s+([MWX])\s+([\d.]+)$/);
+  if (!m) return { line1: s, line2: '' };
+  const genderMap = { M: 'Men', W: 'Women', X: 'Mixed' };
+  const parts = m[2].split(' ');
+  return {
+    line1: `${m[1]} ${m[4]} ${genderMap[m[3]] || m[3]}`,
+    line2: `${parts[0][0].toUpperCase() + parts[0].slice(1).toLowerCase()} \u2022 ${parts.slice(1).join(' ')}`
+  };
+}
+
+function bubblePct(ntrp, dynamic_rating) {
+  if (!ntrp || !dynamic_rating) return 0;
+  // ntrp cert IS the ceiling; floor = ntrp - 0.5
+  // Position within the player's actual NTRP band, 0% = floor, 100% = ceiling
+  const pct = ((dynamic_rating - (ntrp - 0.5)) / 0.5) * 100;
+  return Math.min(100, Math.max(0, pct));
+}
+
+function streakColor(streak) {
+  if (!streak || streak === 'None') return '';
+  return streak.startsWith('W') ? 'green' : 'red';
+}
+
+function renderCard(p, courts) {
+  const s = p.stats || {};
+  const status = p.bubble_status || 'safe';
+
+  const badgeLabel = status === 'risk' ? 'Bump Up Risk' : status === 'risk_down' ? 'Bump Down Risk' : status === 'on_bubble' ? 'On The Bubble' : 'Safe';
+  const ntrp = p.ntrp ? p.ntrp.toFixed(1) : '—';
+  const dynRating = p.dynamic_rating ? p.dynamic_rating.toFixed(2) : '—';
+  // Dynamic rating color: red = near bump up, blue = near bump down, green = safe
+  const dynColor = (p.ntrp && p.dynamic_rating)
+    ? (p.dynamic_rating >= p.ntrp - 0.05 ? 'var(--red)' : p.dynamic_rating <= (p.ntrp - 0.5) + 0.05 ? '#6AAEE6' : 'var(--green)')
+    : 'var(--text-primary)';
+
+  const meterPct = bubblePct(p.ntrp, p.dynamic_rating);
+
+  // Current season stats (current year only)
+  const curW = p.current_wins || 0;
+  const curL = p.current_losses || 0;
+  const record   = `${curW}-${curL}`;
+  const winPct   = curW + curL > 0 ? `${Math.round(curW/(curW+curL)*100)}%` : '—';
+  const streak   = s.streak_2025   || '—';
+  const longestW = s.longest_win_2025  ?? '—';
+  const longestL = s.longest_loss_2025 ?? '—';
+  const avgOpp   = s.avg_opp_rating_2025 ? s.avg_opp_rating_2025.toFixed(2) : '—';
+  const setTbPct = s.set_tb_pct_2025    != null ? `${s.set_tb_pct_2025}%` : '—';
+  const thirdPct = s.third_set_pct_2025 != null ? `${s.third_set_pct_2025}%` : '—';
+  const postPct  = s.postseason_pct_2025 != null ? `${s.postseason_pct_2025}%` : '—';
+
+  // Percentage color rule: >= 50% green, < 50% red
+  const pctClass = v => v != null ? (v >= 50 ? 'green' : 'red') : '';
+  // Record color rule: winning green, losing red, even white
+  const recordClass = (w, l) => w > l ? 'green' : w < l ? 'red' : '';
+  const recordStrClass = str => {
+    if (!str) return '';
+    const parts = str.split('-').map(Number);
+    return parts.length === 2 ? recordClass(parts[0], parts[1]) : '';
+  };
+  const curRecordClass = recordClass(curW, curL);
+  const winPctRaw = curW + curL > 0 ? Math.round(curW/(curW+curL)*100) : null;
+  const winPctClass  = pctClass(winPctRaw);
+  const setTbClass   = pctClass(s.set_tb_pct_2025);
+  const thirdClass   = pctClass(s.third_set_pct_2025);
+  const postClass    = pctClass(s.postseason_pct_2025);
+
+  // Recent match rows from court appearances
+  const matchRows = courts.slice(0, 5).map(c => {
+    const isHome    = c.home_player1 === p.name || c.home_player2 === p.name;
+    const won       = c.winner === (isHome ? 'home' : 'away');
+    const partners  = isHome
+      ? [c.home_player1, c.home_player2].filter(n => n && n !== p.name)
+      : [c.away_player1, c.away_player2].filter(n => n && n !== p.name);
+    const opponents = isHome
+      ? [c.away_player1, c.away_player2].filter(n => n && n.trim())
+      : [c.home_player1, c.home_player2].filter(n => n && n.trim());
+    const oppLabel  = opponents.map(n => n.split(' ').pop()).join(' & ');
+    const partnerLabel = partners.length ? ` w/ ${partners[0].split(' ').pop()}` : '';
+    const lg = parseLeague(c.league);
+    return `
+      <div class="match-row">
+        <div class="match-date">${formatDate(c.date)}</div>
+        <div class="match-main">
+          <div class="match-result ${won ? 'win' : 'loss'}">${won ? 'W' : 'L'}</div>
+          <div class="match-name">vs ${oppLabel}${partnerLabel}</div>
+          <div class="match-score ${won ? 'win' : 'loss'}">${c.score || ''}</div>
+        </div>
+        <div class="match-meta">
+          <div class="opp-date">${[lg.line1, lg.line2].filter(Boolean).join(' \u2022 ')}</div>
+        </div>
+      </div>`;
+  }).join('');
+
+  document.title = `OnTheBubble — ${p.name}`;
+  document.getElementById('card').innerHTML = `
+    <!-- HEADER -->
+    <div class="card-header">
+      <div class="bubble-badge ${status}">
+        <div class="bubble-dot"></div>${badgeLabel}
+      </div>
+      <div class="player-meta">
+        <div class="avatar">${initials(p.name)}</div>
+        <div class="player-info">
+          <div class="player-name">${p.name}</div>
+          <div class="player-sub">${[p.location, p.gender].filter(Boolean).join(' \u2022 ')}</div>
+        </div>
+      </div>
+      <div class="rating-row">
+        <div class="rating-block">
+          <div class="rating-label">NTRP<br>Level</div>
+          <div class="rating-value">${ntrp}</div>
+          <div class="rating-sub">${s.ntrp_date ? `Since ${s.ntrp_date.split('/').pop()}` : ''}</div>
+        </div>
+        <div class="rating-block">
+          <div class="rating-label">Dynamic Est.</div>
+          <div class="rating-value" style="color:${dynColor}">${dynRating}</div>
+          <div class="rating-sub"></div>
+        </div>
+        <div class="rating-block">
+          <div class="rating-label">On The<br>Bubble</div>
+          <div class="rating-value" style="color:${
+            status==='risk'      ? 'var(--red)'   :
+            status==='risk_down' ? '#6AAEE6'      :
+            status==='on_bubble' ? 'var(--gold)'  : 'var(--green)'
+          }">${
+            status==='risk'      ? 'HIGH <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>' :
+            status==='risk_down' ? 'HIGH <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>' :
+            status==='on_bubble' ? 'WATCH'  : 'SAFE'
+          }</div>
+          <div class="rating-sub ${
+            status==='risk'      ? 'bad'  :
+            status==='risk_down' ? ''     :
+            status==='on_bubble' ? 'warn' : 'up'
+          }" style="white-space:nowrap;${status==='risk_down'?'color:#6AAEE6':''}">${
+            status==='risk'      ? '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Bump up'   :
+            status==='risk_down' ? '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg> Bump down'  :
+            status==='on_bubble' ? '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> Monitor closely' : '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> In range'
+          }</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BUBBLE METER -->
+    <div class="bubble-section">
+      <div class="section-label">ONTHE<span style="color:var(--gold)">BUBBLE</span> BUMP RISK METER FOR ${ntrp}</div>
+      <div class="meter-track">
+        <div class="meter-fill" style="width:${meterPct}%;background:${
+          meterPct >= 90 ? 'linear-gradient(90deg,var(--gold),var(--red))' :
+          meterPct <= 10 ? 'linear-gradient(90deg,#6AAEE6,#6AAEE6)' :
+          'linear-gradient(90deg,var(--green),var(--gold))'
+        }">
+          <div class="meter-marker" style="background:${
+            meterPct >= 90 ? 'var(--red)' :
+            meterPct <= 10 ? '#6AAEE6'   : 'var(--gold)'
+          };box-shadow:0 0 10px ${
+            meterPct >= 90 ? 'rgba(224,85,85,0.5)' :
+            meterPct <= 10 ? 'rgba(106,174,230,0.5)' : 'rgba(188,180,62,0.5)'
+          }"></div>
+        </div>
+      </div>
+      <div class="meter-labels">
+        <span>${p.ntrp ? (p.ntrp - 0.5).toFixed(1) : '—'} floor</span>
+        <span class="active">${meterPct.toFixed(0)}% of range</span>
+        <span>${ntrp} ceiling</span>
+      </div>
+    </div>
+
+    <!-- CURRENT SEASON -->
+    <div class="stats-section">
+      <div class="section-label">Current Season Overview</div>
+      <div class="stats-grid">
+        <div class="stat-cell">
+          <div class="stat-num ${curRecordClass}">${record}</div>
+          <div class="stat-desc">Record</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num ${winPctClass}">${winPct}</div>
+          <div class="stat-desc">Win Rate</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num ${streakColor(streak)}">${streak}</div>
+          <div class="stat-desc">Streak</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2025 SEASON SNAPSHOT -->
+    <div class="stats-section">
+      <div class="section-label">2025 Season Overview</div>
+      <div class="stats-grid">
+        <div class="stat-cell">
+          <div class="stat-num ${recordStrClass(s.record_2025)}">${s.record_2025 || '—'}</div>
+          <div class="stat-desc">Record</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num ${pctClass(s.win_pct_2025)}">${s.win_pct_2025 != null ? s.win_pct_2025 + '%' : '—'}</div>
+          <div class="stat-desc">Win Rate</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num ${recordStrClass(s.postseason_record_2025)}">${s.postseason_record_2025 || '—'}</div>
+          <div class="stat-desc">Postseason</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STREAK RECORDS -->
+    <div class="stats-section">
+      <div class="section-label">Streak Records</div>
+      <div class="stats-grid">
+        <div class="stat-cell">
+          <div class="stat-num green">${longestW}</div>
+          <div class="stat-desc">Longest Win</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num red">${longestL}</div>
+          <div class="stat-desc">Longest Loss</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num" style="color:var(--green)">${avgOpp}</div>
+          <div class="stat-desc">Avg Opp Rtg</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLUTCH STATS -->
+    <div class="stats-section">
+      <div class="section-label">Clutch Performance</div>
+      <div class="stats-grid">
+        <div class="stat-cell">
+          <div class="stat-num ${setTbClass}">${setTbPct}</div>
+          <div class="stat-desc">Set Tiebreak</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num ${thirdClass}">${thirdPct}</div>
+          <div class="stat-desc">3rd Set TB</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num ${postClass}">${postPct}</div>
+          <div class="stat-desc">Postseason</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RECENT MATCHES -->
+    <div class="matches-section">
+      <div class="section-label">Recent Matches</div>
+      ${matchRows || '<div class="empty-state" style="padding:12px 0">No match history in current season</div>'}
+    </div>
+  `;
+}
+
+load();
+</script>
+</body>
+</html>

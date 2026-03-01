@@ -1,0 +1,3130 @@
+{
+  "teams": [
+    {
+      "url": "/adult/teamprofile.aspx?year=2026&teamname=X40%207.0%20MV3%20Nguyen",
+      "teamName": "X40 7.0 MV3 Nguyen",
+      "leagueName": "2026 NEOTA Mixed 40 & Over (Subflight 2)",
+      "leagueType": "Mixed 40+",
+      "section": "Midwest",
+      "gender": "X",
+      "level": "7.0",
+      "players": [
+        {
+          "name": "Phong Nguyen",
+          "location": "Mentor, OH",
+          "gender": "M",
+          "ntrp": 4,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 3.99,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Timothy Jones",
+          "location": "Cleveland, OH",
+          "gender": "M",
+          "ntrp": 4,
+          "wins": 3,
+          "losses": 2,
+          "dynamicRating": 3.98,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Frank Mercuri",
+          "location": "Chesterland, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 2,
+          "losses": 0,
+          "dynamicRating": 3.55,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Gary Fleming",
+          "location": "Mentor, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 3.55,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Patricia Mercuri",
+          "location": "Chesterland, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 2,
+          "dynamicRating": 3.51,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Chipo Jolibois",
+          "location": "Cleveland, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.51,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "David Blond",
+          "location": "Beachwood, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.5,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Marybeth Esposito",
+          "location": "Willoughby, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.5,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Eric Eichhorn",
+          "location": "Beachwood, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.5,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Eileen Connell",
+          "location": "Cleveland, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 3.49,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "VIctoria Ung",
+          "location": "Cleveland, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.45,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Donna Fleming",
+          "location": "Mentor, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 2,
+          "losses": 0,
+          "dynamicRating": 2.97,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Denise Hwang",
+          "location": "Cleveland, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 2.96,
+          "bubbleStatus": "risk"
+        }
+      ],
+      "opponentUrls": [
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20WR%20Downing&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20MV1%20Drenovsky&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20MM%20Ghosh&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20MV2%20Gustafson&year=2026"
+      ],
+      "schedule": [
+        {
+          "date": "02/20/2026",
+          "opponent": "X40 7.0 WR Downing",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "3-0",
+          "matchId": 120558
+        },
+        {
+          "date": "02/27/2026",
+          "opponent": "X40 7.0 MV1 Drenovsky",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "0-0",
+          "matchId": 120561
+        },
+        {
+          "date": "03/06/2026",
+          "opponent": "X40 7.0 MM Ghosh",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "0-0",
+          "matchId": 120563
+        },
+        {
+          "date": "03/13/2026",
+          "opponent": "X40 7.0 MV2 Gustafson",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "0-0",
+          "matchId": 120564
+        },
+        {
+          "date": "03/27/2026",
+          "opponent": "X40 7.0 WR Downing",
+          "venue": "Western Reserve Racquet and Fitness Club",
+          "result": "0-0",
+          "matchId": 120568
+        },
+        {
+          "date": "04/10/2026",
+          "opponent": "X40 7.0 MV1 Drenovsky",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "0-0",
+          "matchId": 120571
+        },
+        {
+          "date": "04/24/2026",
+          "opponent": "X40 7.0 MM Ghosh",
+          "venue": "Cleveland State University (Medical Mutual Tennis Pavilion)",
+          "result": "0-0",
+          "matchId": 120573
+        },
+        {
+          "date": "05/01/2026",
+          "opponent": "X40 7.0 MV2 Gustafson",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "0-0",
+          "matchId": 120574
+        }
+      ]
+    },
+    {
+      "url": "/adult/teamprofile.aspx?year=2026&teamname=X40%207.0%20NC2%20Williams",
+      "teamName": "X40 7.0 NC2 Williams",
+      "leagueName": "2026 NEOTA Mixed 40 & Over (Subflight 1)",
+      "leagueType": "Mixed 40+",
+      "section": "Midwest",
+      "gender": "X",
+      "level": "7.0",
+      "players": [
+        {
+          "name": "Michael Williams",
+          "location": "Canton, OH",
+          "gender": "M",
+          "ntrp": 4,
+          "wins": 0,
+          "losses": 2,
+          "dynamicRating": 3.66,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Matthew Horwich",
+          "location": "Rocky River, OH",
+          "gender": "M",
+          "ntrp": 4,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.65,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "David Currier",
+          "location": "Canton, OH",
+          "gender": "M",
+          "ntrp": 4,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 3.64,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Tim Shepherd",
+          "location": "North Canton, OH",
+          "gender": "M",
+          "ntrp": 4,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.61,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Clayton Cundiff",
+          "location": "New Franklin, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.32,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Karri Tadayon",
+          "location": "Massillon, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Tom Webb",
+          "location": "Massillon, OH",
+          "gender": "M",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 3,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Kimberly Williams",
+          "location": "Canton, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 3,
+          "bubbleStatus": "risk_down"
+        },
+        {
+          "name": "Erin Gelal",
+          "location": "CANTON, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 2.99,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Shannon Zaher",
+          "location": "North Canton, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 2,
+          "losses": 1,
+          "dynamicRating": 2.98,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Vicki Shepherd",
+          "location": "North Canton, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 2,
+          "dynamicRating": 2.92,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Jeannette Cho",
+          "location": "Canton, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 2.76,
+          "bubbleStatus": "safe"
+        }
+      ],
+      "opponentUrls": [
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20NC1%20Bailey&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20BR%20Timken&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20TP%20Fox&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20PM%20Rhyner&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20LT%20McKenzie&year=2026"
+      ],
+      "schedule": [
+        {
+          "date": "02/06/2026",
+          "opponent": "X40 7.0 NC1 Bailey",
+          "venue": "North Canton Racquet Club",
+          "result": "0-3",
+          "matchId": 120527
+        },
+        {
+          "date": "02/20/2026",
+          "opponent": "X40 7.0 BR Timken",
+          "venue": "Brookside Country Club",
+          "result": "2-1",
+          "matchId": 120529
+        },
+        {
+          "date": "02/27/2026",
+          "opponent": "X40 7.0 TP Fox",
+          "venue": "Towpath Tennis Center",
+          "result": "0-0",
+          "matchId": 120532
+        },
+        {
+          "date": "03/06/2026",
+          "opponent": "X40 7.0 PM Rhyner",
+          "venue": "North Canton Racquet Club",
+          "result": "0-0",
+          "matchId": 120536
+        },
+        {
+          "date": "03/13/2026",
+          "opponent": "X40 7.0 LT McKenzie",
+          "venue": "La Tuchie Tennis Center",
+          "result": "0-0",
+          "matchId": 120540
+        },
+        {
+          "date": "03/20/2026",
+          "opponent": "X40 7.0 NC1 Bailey",
+          "venue": "North Canton Racquet Club",
+          "result": "0-0",
+          "matchId": 120543
+        },
+        {
+          "date": "03/27/2026",
+          "opponent": "X40 7.0 BR Timken",
+          "venue": "North Canton Racquet Club",
+          "result": "0-0",
+          "matchId": 120545
+        },
+        {
+          "date": "04/10/2026",
+          "opponent": "X40 7.0 PM Rhyner",
+          "venue": "Paramount Tennis Club",
+          "result": "0-0",
+          "matchId": 120549
+        },
+        {
+          "date": "04/25/2026",
+          "opponent": "X40 7.0 TP Fox",
+          "venue": "North Canton Racquet Club",
+          "result": "0-0",
+          "matchId": 120550
+        },
+        {
+          "date": "05/01/2026",
+          "opponent": "X40 7.0 LT McKenzie",
+          "venue": "North Canton Racquet Club",
+          "result": "0-0",
+          "matchId": 120554
+        }
+      ]
+    },
+    {
+      "url": "/adult/teamprofile.aspx?year=2026&teamname=X40%207.0%20LT%20McKenzie",
+      "teamName": "X40 7.0 LT McKenzie",
+      "leagueName": "2026 NEOTA Mixed 40 & Over (Subflight 1)",
+      "leagueType": "Mixed 40+",
+      "section": "Midwest",
+      "gender": "X",
+      "level": "7.0",
+      "players": [
+        {
+          "name": "Vu Nguyen",
+          "location": "Kent, OH",
+          "gender": "M",
+          "ntrp": 4,
+          "wins": 2,
+          "losses": 0,
+          "dynamicRating": 3.62,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Jeffrey Miller",
+          "location": "Stow, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 3.51,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Donna Balc",
+          "location": "Munroe Falls, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 3.5,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Chito Lam",
+          "location": "HUDSON, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.5,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Heather Wentz",
+          "location": "Stow, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.42,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Steve Gehring",
+          "location": "Stow, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 2,
+          "losses": 0,
+          "dynamicRating": 3.4,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Jennifer Ruggles",
+          "location": "Stow, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 3.4,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Christina Reeves",
+          "location": "Stow, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 2,
+          "losses": 0,
+          "dynamicRating": 3.4,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Ryan Garst",
+          "location": "Stow, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 3,
+          "dynamicRating": 3.36,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Rob Rericha",
+          "location": "Stow, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.29,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Kristin Lenton",
+          "location": "Stow, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 3.27,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Leslie Miller",
+          "location": "Stow, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 3,
+          "dynamicRating": 3.23,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Geoff Fiedler",
+          "location": "Munroe Falls, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.18,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "SHENGYONG WANG",
+          "location": "Hudson, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.15,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Alissa McKenzie",
+          "location": "Akron, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.12,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Clare Stacey",
+          "location": "Kent, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 3.05,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Tracy Mathia",
+          "location": "PENINSULA, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.01,
+          "bubbleStatus": "risk_down"
+        },
+        {
+          "name": "Steven Wood",
+          "location": "Kent, OH",
+          "gender": "M",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 3,
+          "bubbleStatus": "risk"
+        }
+      ],
+      "opponentUrls": [
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20PM%20Rhyner&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20TP%20Fox&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20NC1%20Bailey&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20BR%20Timken&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20NC2%20Williams&year=2026"
+      ],
+      "schedule": [
+        {
+          "date": "02/06/2026",
+          "opponent": "X40 7.0 PM Rhyner",
+          "venue": "Paramount Tennis Club",
+          "result": "0-3",
+          "matchId": 120528
+        },
+        {
+          "date": "02/20/2026",
+          "opponent": "X40 7.0 TP Fox",
+          "venue": "Towpath Tennis Center",
+          "result": "2-1",
+          "matchId": 120531
+        },
+        {
+          "date": "02/27/2026",
+          "opponent": "X40 7.0 NC1 Bailey",
+          "venue": "La Tuchie Tennis Center",
+          "result": "0-0",
+          "matchId": 120533
+        },
+        {
+          "date": "03/06/2026",
+          "opponent": "X40 7.0 BR Timken",
+          "venue": "Brookside Country Club",
+          "result": "0-0",
+          "matchId": 120537
+        },
+        {
+          "date": "03/13/2026",
+          "opponent": "X40 7.0 NC2 Williams",
+          "venue": "La Tuchie Tennis Center",
+          "result": "0-0",
+          "matchId": 120540
+        },
+        {
+          "date": "03/20/2026",
+          "opponent": "X40 7.0 PM Rhyner",
+          "venue": "La Tuchie Tennis Center",
+          "result": "0-0",
+          "matchId": 120542
+        },
+        {
+          "date": "03/27/2026",
+          "opponent": "X40 7.0 TP Fox",
+          "venue": "La Tuchie Tennis Center",
+          "result": "0-0",
+          "matchId": 120544
+        },
+        {
+          "date": "04/10/2026",
+          "opponent": "X40 7.0 BR Timken",
+          "venue": "La Tuchie Tennis Center",
+          "result": "0-0",
+          "matchId": 120548
+        },
+        {
+          "date": "04/25/2026",
+          "opponent": "X40 7.0 NC1 Bailey",
+          "venue": "North Canton Racquet Club",
+          "result": "0-0",
+          "matchId": 120551
+        },
+        {
+          "date": "05/01/2026",
+          "opponent": "X40 7.0 NC2 Williams",
+          "venue": "North Canton Racquet Club",
+          "result": "0-0",
+          "matchId": 120554
+        }
+      ]
+    },
+    {
+      "url": "/adult/teamprofile.aspx?year=2026&teamname=X40%207.0%20NC1%20Bailey",
+      "teamName": "X40 7.0 NC1 Bailey",
+      "leagueName": "2026 NEOTA Mixed 40 & Over (Subflight 1)",
+      "leagueType": "Mixed 40+",
+      "section": "Midwest",
+      "gender": "X",
+      "level": "7.0",
+      "players": [
+        {
+          "name": "Kay McHolm",
+          "location": "North Canton, OH",
+          "gender": "F",
+          "ntrp": 4,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 3.86,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Carl Blaine",
+          "location": "Massillon, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 2,
+          "losses": 0,
+          "dynamicRating": 3.61,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Rex Degler",
+          "location": "Navarre, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 3.52,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "William Burnett",
+          "location": "Uniontown, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.51,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "William Arledge",
+          "location": "North Canton, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.5,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Ashley Bullach",
+          "location": "Dalton, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 2,
+          "losses": 0,
+          "dynamicRating": 3.48,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Michelle Rich",
+          "location": "Canton, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.45,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Stephanie Bailey",
+          "location": "Canton, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.45,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Valerie Johnson",
+          "location": "North Canton, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 2,
+          "losses": 0,
+          "dynamicRating": 3.44,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Brian Suddeth",
+          "location": "Tallmadge, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.4,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Allison Chiofolo",
+          "location": "Canton, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.25,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Douglas Bernard",
+          "location": "North Canton, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.22,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Elbert Enrique",
+          "location": "North Canton, OH",
+          "gender": "M",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 2.75,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "MICHAEL GIBSON",
+          "location": "Massillon, OH",
+          "gender": "M",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 2.75,
+          "bubbleStatus": "safe"
+        }
+      ],
+      "opponentUrls": [
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20NC2%20Williams&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20PM%20Rhyner&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20LT%20McKenzie&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20TP%20Fox&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20BR%20Timken&year=2026"
+      ],
+      "schedule": [
+        {
+          "date": "02/06/2026",
+          "opponent": "X40 7.0 NC2 Williams",
+          "venue": "North Canton Racquet Club",
+          "result": "3-0",
+          "matchId": 120527
+        },
+        {
+          "date": "02/20/2026",
+          "opponent": "X40 7.0 PM Rhyner",
+          "venue": "North Canton Racquet Club",
+          "result": "0-0",
+          "matchId": 120530
+        },
+        {
+          "date": "02/27/2026",
+          "opponent": "X40 7.0 LT McKenzie",
+          "venue": "La Tuchie Tennis Center",
+          "result": "0-0",
+          "matchId": 120533
+        },
+        {
+          "date": "03/06/2026",
+          "opponent": "X40 7.0 TP Fox",
+          "venue": "North Canton Racquet Club",
+          "result": "0-0",
+          "matchId": 120535
+        },
+        {
+          "date": "03/13/2026",
+          "opponent": "X40 7.0 BR Timken",
+          "venue": "North Canton Racquet Club",
+          "result": "0-0",
+          "matchId": 120539
+        },
+        {
+          "date": "03/20/2026",
+          "opponent": "X40 7.0 NC2 Williams",
+          "venue": "North Canton Racquet Club",
+          "result": "0-0",
+          "matchId": 120543
+        },
+        {
+          "date": "03/27/2026",
+          "opponent": "X40 7.0 PM Rhyner",
+          "venue": "Paramount Tennis Club",
+          "result": "0-0",
+          "matchId": 120546
+        },
+        {
+          "date": "04/10/2026",
+          "opponent": "X40 7.0 TP Fox",
+          "venue": "Towpath Tennis Center",
+          "result": "0-0",
+          "matchId": 120547
+        },
+        {
+          "date": "04/25/2026",
+          "opponent": "X40 7.0 LT McKenzie",
+          "venue": "North Canton Racquet Club",
+          "result": "0-0",
+          "matchId": 120551
+        },
+        {
+          "date": "05/01/2026",
+          "opponent": "X40 7.0 BR Timken",
+          "venue": "Brookside Country Club",
+          "result": "0-0",
+          "matchId": 120553
+        }
+      ]
+    },
+    {
+      "url": "/adult/teamprofile.aspx?year=2026&teamname=X40%207.0%20PM%20Rhyner",
+      "teamName": "X40 7.0 PM Rhyner",
+      "leagueName": "2026 NEOTA Mixed 40 & Over (Subflight 1)",
+      "leagueType": "Mixed 40+",
+      "section": "Midwest",
+      "gender": "X",
+      "level": "7.0",
+      "players": [
+        {
+          "name": "Christopher Baranek",
+          "location": "Akron, OH",
+          "gender": "M",
+          "ntrp": 4,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 4,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Aaron Stuetzer",
+          "location": "Chagrin Falls, OH",
+          "gender": "M",
+          "ntrp": 4,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.74,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Wade Hurley",
+          "location": "Broadview Heights, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 3,
+          "losses": 1,
+          "dynamicRating": 3.55,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Brian Lonsway",
+          "location": "Avon, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 3.52,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Jun Hee Han",
+          "location": "STRONGSVILLE, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 3.48,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Kevin Butler",
+          "location": "Lakewood, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 2,
+          "losses": 0,
+          "dynamicRating": 3.48,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Lauren Thomas",
+          "location": "Medina, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 3.42,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Alison Baranek",
+          "location": "Akron, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 3.4,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Cynthia Rhyner",
+          "location": "Chippewa Lake, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.28,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Miroslav Janci",
+          "location": "Medina, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 3.27,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Iuliana Nita",
+          "location": "Akron, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.27,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "John Wirtz",
+          "location": "Medina, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.12,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Michaelia Cucci",
+          "location": "Akron, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 2.83,
+          "bubbleStatus": "safe"
+        }
+      ],
+      "opponentUrls": [
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20LT%20McKenzie&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20NC1%20Bailey&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20BR%20Timken&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20NC2%20Williams&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20TP%20Fox&year=2026"
+      ],
+      "schedule": [
+        {
+          "date": "02/06/2026",
+          "opponent": "X40 7.0 LT McKenzie",
+          "venue": "Paramount Tennis Club",
+          "result": "3-0",
+          "matchId": 120528
+        },
+        {
+          "date": "02/20/2026",
+          "opponent": "X40 7.0 NC1 Bailey",
+          "venue": "North Canton Racquet Club",
+          "result": "0-0",
+          "matchId": 120530
+        },
+        {
+          "date": "02/27/2026",
+          "opponent": "X40 7.0 BR Timken",
+          "venue": "Paramount Tennis Club",
+          "result": "0-0",
+          "matchId": 120534
+        },
+        {
+          "date": "03/06/2026",
+          "opponent": "X40 7.0 NC2 Williams",
+          "venue": "North Canton Racquet Club",
+          "result": "0-0",
+          "matchId": 120536
+        },
+        {
+          "date": "03/13/2026",
+          "opponent": "X40 7.0 TP Fox",
+          "venue": "Towpath Tennis Center",
+          "result": "0-0",
+          "matchId": 120538
+        },
+        {
+          "date": "03/20/2026",
+          "opponent": "X40 7.0 LT McKenzie",
+          "venue": "La Tuchie Tennis Center",
+          "result": "0-0",
+          "matchId": 120542
+        },
+        {
+          "date": "03/27/2026",
+          "opponent": "X40 7.0 NC1 Bailey",
+          "venue": "Paramount Tennis Club",
+          "result": "0-0",
+          "matchId": 120546
+        },
+        {
+          "date": "04/10/2026",
+          "opponent": "X40 7.0 NC2 Williams",
+          "venue": "Paramount Tennis Club",
+          "result": "0-0",
+          "matchId": 120549
+        },
+        {
+          "date": "04/25/2026",
+          "opponent": "X40 7.0 BR Timken",
+          "venue": "Brookside Country Club",
+          "result": "0-0",
+          "matchId": 120552
+        },
+        {
+          "date": "05/01/2026",
+          "opponent": "X40 7.0 TP Fox",
+          "venue": "Paramount Tennis Club",
+          "result": "0-0",
+          "matchId": 120555
+        }
+      ]
+    },
+    {
+      "url": "/adult/teamprofile.aspx?year=2026&teamname=X40%207.0%20BR%20Timken",
+      "teamName": "X40 7.0 BR Timken",
+      "leagueName": "2026 NEOTA Mixed 40 & Over (Subflight 1)",
+      "leagueType": "Mixed 40+",
+      "section": "Midwest",
+      "gender": "X",
+      "level": "7.0",
+      "players": [
+        {
+          "name": "Dan Paulus",
+          "location": "Canton, OH",
+          "gender": "M",
+          "ntrp": 4,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 3.96,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Ramesh Krishnamurthi",
+          "location": "Canton, OH",
+          "gender": "M",
+          "ntrp": 4,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.51,
+          "bubbleStatus": "risk_down"
+        },
+        {
+          "name": "Nathaniel Brahler",
+          "location": "Massillon, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.5,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Kristin Zalenski",
+          "location": "Canton, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 2,
+          "dynamicRating": 3.39,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Sara Timken",
+          "location": "Canton, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 3,
+          "dynamicRating": 3.22,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Traci Tsai",
+          "location": "Massillon, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 3.22,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Fred Zalenski",
+          "location": "Canton, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.12,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Robert Timken",
+          "location": "Canton, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.1,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "joey hass",
+          "location": "CANTON, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.06,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Drew Swallen",
+          "location": "Canton, OH",
+          "gender": "M",
+          "ntrp": 3,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.01,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "David Tsai",
+          "location": "Massillon, OH",
+          "gender": "M",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 3,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Tiffany Ruwadi",
+          "location": "MASSILLON, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 0,
+          "losses": 2,
+          "dynamicRating": 2.89,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Katie Wernow",
+          "location": "Canton, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 2.89,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Jacqueline Paulus",
+          "location": "CANTON, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 2,
+          "losses": 0,
+          "dynamicRating": 2.88,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Rachel Brahler",
+          "location": "Massillon, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 2.73,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Howard Wernow",
+          "location": "Canton, OH",
+          "gender": "M",
+          "ntrp": 3,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": null,
+          "bubbleStatus": "safe"
+        }
+      ],
+      "opponentUrls": [
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20TP%20Fox&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20NC2%20Williams&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20PM%20Rhyner&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20LT%20McKenzie&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20NC1%20Bailey&year=2026"
+      ],
+      "schedule": [
+        {
+          "date": "02/06/2026",
+          "opponent": "X40 7.0 TP Fox",
+          "venue": "Towpath Tennis Center",
+          "result": "2-1",
+          "matchId": 120526
+        },
+        {
+          "date": "02/20/2026",
+          "opponent": "X40 7.0 NC2 Williams",
+          "venue": "Brookside Country Club",
+          "result": "1-2",
+          "matchId": 120529
+        },
+        {
+          "date": "02/27/2026",
+          "opponent": "X40 7.0 PM Rhyner",
+          "venue": "Paramount Tennis Club",
+          "result": "0-0",
+          "matchId": 120534
+        },
+        {
+          "date": "03/06/2026",
+          "opponent": "X40 7.0 LT McKenzie",
+          "venue": "Brookside Country Club",
+          "result": "0-0",
+          "matchId": 120537
+        },
+        {
+          "date": "03/13/2026",
+          "opponent": "X40 7.0 NC1 Bailey",
+          "venue": "North Canton Racquet Club",
+          "result": "0-0",
+          "matchId": 120539
+        },
+        {
+          "date": "03/20/2026",
+          "opponent": "X40 7.0 TP Fox",
+          "venue": "Brookside Country Club",
+          "result": "0-0",
+          "matchId": 120541
+        },
+        {
+          "date": "03/27/2026",
+          "opponent": "X40 7.0 NC2 Williams",
+          "venue": "North Canton Racquet Club",
+          "result": "0-0",
+          "matchId": 120545
+        },
+        {
+          "date": "04/10/2026",
+          "opponent": "X40 7.0 LT McKenzie",
+          "venue": "La Tuchie Tennis Center",
+          "result": "0-0",
+          "matchId": 120548
+        },
+        {
+          "date": "04/25/2026",
+          "opponent": "X40 7.0 PM Rhyner",
+          "venue": "Brookside Country Club",
+          "result": "0-0",
+          "matchId": 120552
+        },
+        {
+          "date": "05/01/2026",
+          "opponent": "X40 7.0 NC1 Bailey",
+          "venue": "Brookside Country Club",
+          "result": "0-0",
+          "matchId": 120553
+        }
+      ]
+    },
+    {
+      "url": "/adult/teamprofile.aspx?year=2026&teamname=X40%207.0%20TP%20Fox",
+      "teamName": "X40 7.0 TP Fox",
+      "leagueName": "2026 NEOTA Mixed 40 & Over (Subflight 1)",
+      "leagueType": "Mixed 40+",
+      "section": "Midwest",
+      "gender": "X",
+      "level": "7.0",
+      "players": [
+        {
+          "name": "Robert Moore",
+          "location": "BRECKSVILLE, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 3.37,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Steve Barker",
+          "location": "Cuyahoga Falls, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 4,
+          "losses": 0,
+          "dynamicRating": 3.34,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Alice Lewis",
+          "location": "Akron, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 2,
+          "dynamicRating": 3.31,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Lori Young",
+          "location": "Hudson, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 3.29,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Christine Norman",
+          "location": "Stow, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 3.27,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Kelley Jones",
+          "location": "Copley, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.26,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Kristi Schulte",
+          "location": "Copley, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.22,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Susan Voth",
+          "location": "Richfield, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.14,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Michelle Fox",
+          "location": "Copley, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 2,
+          "dynamicRating": 3.12,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Joe Lahovich",
+          "location": "Cuyahoga Falls, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.06,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Keith Amtsberg",
+          "location": "Akron, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 2,
+          "dynamicRating": 2.94,
+          "bubbleStatus": "risk_down"
+        },
+        {
+          "name": "William Fox",
+          "location": "Copley, OH",
+          "gender": "M",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 2,
+          "dynamicRating": 2.93,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Brian Lambright",
+          "location": "Cuyahoga Falls, OH",
+          "gender": "M",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 2.93,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Karen Lahovich",
+          "location": "Cuyahoga Falls, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 2.85,
+          "bubbleStatus": "safe"
+        }
+      ],
+      "opponentUrls": [
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20BR%20Timken&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20LT%20McKenzie&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20NC2%20Williams&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20NC1%20Bailey&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20PM%20Rhyner&year=2026"
+      ],
+      "schedule": [
+        {
+          "date": "02/06/2026",
+          "opponent": "X40 7.0 BR Timken",
+          "venue": "Towpath Tennis Center",
+          "result": "1-2",
+          "matchId": 120526
+        },
+        {
+          "date": "02/20/2026",
+          "opponent": "X40 7.0 LT McKenzie",
+          "venue": "Towpath Tennis Center",
+          "result": "1-2",
+          "matchId": 120531
+        },
+        {
+          "date": "02/27/2026",
+          "opponent": "X40 7.0 NC2 Williams",
+          "venue": "Towpath Tennis Center",
+          "result": "0-0",
+          "matchId": 120532
+        },
+        {
+          "date": "03/06/2026",
+          "opponent": "X40 7.0 NC1 Bailey",
+          "venue": "North Canton Racquet Club",
+          "result": "0-0",
+          "matchId": 120535
+        },
+        {
+          "date": "03/13/2026",
+          "opponent": "X40 7.0 PM Rhyner",
+          "venue": "Towpath Tennis Center",
+          "result": "0-0",
+          "matchId": 120538
+        },
+        {
+          "date": "03/20/2026",
+          "opponent": "X40 7.0 BR Timken",
+          "venue": "Brookside Country Club",
+          "result": "0-0",
+          "matchId": 120541
+        },
+        {
+          "date": "03/27/2026",
+          "opponent": "X40 7.0 LT McKenzie",
+          "venue": "La Tuchie Tennis Center",
+          "result": "0-0",
+          "matchId": 120544
+        },
+        {
+          "date": "04/10/2026",
+          "opponent": "X40 7.0 NC1 Bailey",
+          "venue": "Towpath Tennis Center",
+          "result": "0-0",
+          "matchId": 120547
+        },
+        {
+          "date": "04/25/2026",
+          "opponent": "X40 7.0 NC2 Williams",
+          "venue": "North Canton Racquet Club",
+          "result": "0-0",
+          "matchId": 120550
+        },
+        {
+          "date": "05/01/2026",
+          "opponent": "X40 7.0 PM Rhyner",
+          "venue": "Paramount Tennis Club",
+          "result": "0-0",
+          "matchId": 120555
+        }
+      ]
+    },
+    {
+      "url": "/adult/teamprofile.aspx?teamname=X40%207.0%20WR%20Downing&year=2026",
+      "teamName": "X40 7.0 WR Downing",
+      "leagueName": "2026 NEOTA Mixed 40 & Over (Subflight 2)",
+      "leagueType": "Mixed 40+",
+      "section": "Midwest",
+      "gender": "X",
+      "level": "7.0",
+      "players": [
+        {
+          "name": "Beth Jokhio",
+          "location": "Hudson, OH",
+          "gender": "F",
+          "ntrp": 4,
+          "wins": 0,
+          "losses": 2,
+          "dynamicRating": 3.71,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Ryan Hannan",
+          "location": "Hudson, OH",
+          "gender": "M",
+          "ntrp": 4,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.59,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Dan Johnson",
+          "location": "Brecksville, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.5,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "arminda parker",
+          "location": "Hudson, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.43,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Kelle DeBoth",
+          "location": "Hudson, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.41,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Stephanie Sneed",
+          "location": "Hudson, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 2,
+          "dynamicRating": 3.37,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Steven Parker",
+          "location": "Hudson, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 3.3,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Derek Kohanski",
+          "location": "Aurora, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.28,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Emile Gantous",
+          "location": "Twinsburg, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.26,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Melissa Durbin",
+          "location": "Aurora, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.26,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Jo Ann FInk",
+          "location": "Chagrin Falls, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 2,
+          "dynamicRating": 3.26,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Christopher Downing",
+          "location": "Hudson, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.25,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Steve Nutt",
+          "location": "Hudson, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 2,
+          "dynamicRating": 3.17,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Shachi Mody",
+          "location": "Hudson, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.16,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Christine Bucknell",
+          "location": "Hudson, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Christine Davis",
+          "location": "Solon, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 2.96,
+          "bubbleStatus": "risk_down"
+        },
+        {
+          "name": "Steve Constantino",
+          "location": "Aurora, OH",
+          "gender": "M",
+          "ntrp": 3,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 2.94,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Carolyn Kara",
+          "location": "Hudson, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 2.75,
+          "bubbleStatus": "safe"
+        }
+      ],
+      "opponentUrls": [
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20MV2%20Gustafson&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20MV3%20Nguyen&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20MV1%20Drenovsky&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20MM%20Ghosh&year=2026"
+      ],
+      "schedule": [
+        {
+          "date": "02/06/2026",
+          "opponent": "X40 7.0 MV2 Gustafson",
+          "venue": "Western Reserve Racquet and Fitness Club",
+          "result": "1-2",
+          "matchId": 120557
+        },
+        {
+          "date": "02/20/2026",
+          "opponent": "X40 7.0 MV3 Nguyen",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "0-3",
+          "matchId": 120558
+        },
+        {
+          "date": "03/06/2026",
+          "opponent": "X40 7.0 MV1 Drenovsky",
+          "venue": "Western Reserve Racquet and Fitness Club",
+          "result": "0-0",
+          "matchId": 120562
+        },
+        {
+          "date": "03/13/2026",
+          "opponent": "X40 7.0 MM Ghosh",
+          "venue": "Western Reserve Racquet and Fitness Club",
+          "result": "0-0",
+          "matchId": 120565
+        },
+        {
+          "date": "03/20/2026",
+          "opponent": "X40 7.0 MV2 Gustafson",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "0-0",
+          "matchId": 120567
+        },
+        {
+          "date": "03/27/2026",
+          "opponent": "X40 7.0 MV3 Nguyen",
+          "venue": "Western Reserve Racquet and Fitness Club",
+          "result": "0-0",
+          "matchId": 120568
+        },
+        {
+          "date": "04/24/2026",
+          "opponent": "X40 7.0 MV1 Drenovsky",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "0-0",
+          "matchId": 120572
+        },
+        {
+          "date": "05/01/2026",
+          "opponent": "X40 7.0 MM Ghosh",
+          "venue": "Cleveland State University (Medical Mutual Tennis Pavilion)",
+          "result": "0-0",
+          "matchId": 120575
+        }
+      ]
+    },
+    {
+      "url": "/adult/teamprofile.aspx?teamname=X40%207.0%20MV1%20Drenovsky&year=2026",
+      "teamName": "X40 7.0 MV1 Drenovsky",
+      "leagueName": "2026 NEOTA Mixed 40 & Over (Subflight 2)",
+      "leagueType": "Mixed 40+",
+      "section": "Midwest",
+      "gender": "X",
+      "level": "7.0",
+      "players": [
+        {
+          "name": "Motoo Saito",
+          "location": "Chardon, OH",
+          "gender": "M",
+          "ntrp": 4,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.8,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Janeen Miklowski",
+          "location": "Willoughby, OH",
+          "gender": "F",
+          "ntrp": 4,
+          "wins": 0,
+          "losses": 2,
+          "dynamicRating": 3.73,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "GAUTAM PATHAK",
+          "location": "Chagrin Falls, OH",
+          "gender": "M",
+          "ntrp": 4,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 3.64,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Joseph Stimac",
+          "location": "Cleveland Heights, OH",
+          "gender": "M",
+          "ntrp": 4,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.51,
+          "bubbleStatus": "risk_down"
+        },
+        {
+          "name": "Kathleen Aranavage",
+          "location": "Willoughby, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 3,
+          "losses": 1,
+          "dynamicRating": 3.49,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Wei Liao",
+          "location": "Solon, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.48,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Preet Kang",
+          "location": "Pepper Pike, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 2,
+          "dynamicRating": 3.47,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Dongmei Zhang",
+          "location": "Cleveland, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 2,
+          "losses": 2,
+          "dynamicRating": 3.37,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Lauren Smith",
+          "location": "Cleveland Heights, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 2,
+          "losses": 0,
+          "dynamicRating": 3.36,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Bob Berichon",
+          "location": "Hudson, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 2,
+          "losses": 0,
+          "dynamicRating": 3.32,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Liza Brady",
+          "location": "Cleveland, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.25,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Hyundong Cho",
+          "location": "Twinsburg, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.25,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Holly Yotter",
+          "location": "Gates Mills, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.25,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Caren Kirchick",
+          "location": "Chagrin Falls, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.18,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Mehul Shah",
+          "location": "Cleveland, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.1,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Brandon Carrus",
+          "location": "Gates Mills, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.08,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Xiaozhong Men",
+          "location": "Solon, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 2,
+          "losses": 1,
+          "dynamicRating": 3.01,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "George Raguz",
+          "location": "Cleveland, OH",
+          "gender": "M",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 3,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Rebecca Drenovsky",
+          "location": "Cleveland Heights, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 3,
+          "dynamicRating": 2.96,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Sara Carracher",
+          "location": "Gates Mills, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 2,
+          "losses": 0,
+          "dynamicRating": 2.8,
+          "bubbleStatus": "safe"
+        }
+      ],
+      "opponentUrls": [
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20MM%20Ghosh&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20MV2%20Gustafson&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20MV3%20Nguyen&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20WR%20Downing&year=2026"
+      ],
+      "schedule": [
+        {
+          "date": "02/06/2026",
+          "opponent": "X40 7.0 MM Ghosh",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "3-0",
+          "matchId": 120556
+        },
+        {
+          "date": "02/20/2026",
+          "opponent": "X40 7.0 MV2 Gustafson",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "1-2",
+          "matchId": 120559
+        },
+        {
+          "date": "02/27/2026",
+          "opponent": "X40 7.0 MV3 Nguyen",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "0-0",
+          "matchId": 120561
+        },
+        {
+          "date": "03/06/2026",
+          "opponent": "X40 7.0 WR Downing",
+          "venue": "Western Reserve Racquet and Fitness Club",
+          "result": "0-0",
+          "matchId": 120562
+        },
+        {
+          "date": "03/20/2026",
+          "opponent": "X40 7.0 MM Ghosh",
+          "venue": "Cleveland State University (Medical Mutual Tennis Pavilion)",
+          "result": "0-0",
+          "matchId": 120566
+        },
+        {
+          "date": "03/27/2026",
+          "opponent": "X40 7.0 MV2 Gustafson",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "0-0",
+          "matchId": 120569
+        },
+        {
+          "date": "04/10/2026",
+          "opponent": "X40 7.0 MV3 Nguyen",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "0-0",
+          "matchId": 120571
+        },
+        {
+          "date": "04/24/2026",
+          "opponent": "X40 7.0 WR Downing",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "0-0",
+          "matchId": 120572
+        }
+      ]
+    },
+    {
+      "url": "/adult/teamprofile.aspx?teamname=X40%207.0%20MM%20Ghosh&year=2026",
+      "teamName": "X40 7.0 MM Ghosh",
+      "leagueName": "2026 NEOTA Mixed 40 & Over (Subflight 2)",
+      "leagueType": "Mixed 40+",
+      "section": "Midwest",
+      "gender": "X",
+      "level": "7.0",
+      "players": [
+        {
+          "name": "Hazem Nouraldin",
+          "location": "Westlake, OH",
+          "gender": "M",
+          "ntrp": 4,
+          "wins": 2,
+          "losses": 1,
+          "dynamicRating": 3.78,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Jon Birkett",
+          "location": "Brookpark, OH",
+          "gender": "M",
+          "ntrp": 4,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 3.78,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Venkatraman Arakoni",
+          "location": "Broadview Heights, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 2,
+          "dynamicRating": 3.31,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Debabrata Ghosh",
+          "location": "Avon Lake, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 3,
+          "dynamicRating": 3.3,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Ron Garrison",
+          "location": "Cleveland, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.25,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Kin Mei",
+          "location": "Columbia Station, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 2,
+          "dynamicRating": 3.22,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Jennifer Smith",
+          "location": "Westlake, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 2,
+          "losses": 2,
+          "dynamicRating": 3.17,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Doug Michelsen",
+          "location": "Avon, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 3.17,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Caitlin MacDonald",
+          "location": "Olmsted Falls, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 3.12,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Adnan Kazazic",
+          "location": "Cleveland, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 4,
+          "dynamicRating": 3.1,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Vanessa Furrer",
+          "location": "AVON LAKE, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 4,
+          "dynamicRating": 3.09,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Hazel Desamito",
+          "location": "Cleveland, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.04,
+          "bubbleStatus": "risk_down"
+        },
+        {
+          "name": "Santos Suarez",
+          "location": "Olmsted Twp, OH",
+          "gender": "M",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 2.99,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Paula Drapcho",
+          "location": "Avon Lake, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 2.93,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Tisha Bell",
+          "location": "Broadview Heights, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 2,
+          "losses": 2,
+          "dynamicRating": 2.91,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Alamelu Arakoni",
+          "location": "Broadview Heights, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 3,
+          "dynamicRating": 2.91,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Gina Perez",
+          "location": "Oberlin, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 2.62,
+          "bubbleStatus": "safe"
+        }
+      ],
+      "opponentUrls": [
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20MV1%20Drenovsky&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20MV2%20Gustafson&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20MV3%20Nguyen&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20WR%20Downing&year=2026"
+      ],
+      "schedule": [
+        {
+          "date": "02/06/2026",
+          "opponent": "X40 7.0 MV1 Drenovsky",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "0-3",
+          "matchId": 120556
+        },
+        {
+          "date": "02/27/2026",
+          "opponent": "X40 7.0 MV2 Gustafson",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "0-0",
+          "matchId": 120560
+        },
+        {
+          "date": "03/06/2026",
+          "opponent": "X40 7.0 MV3 Nguyen",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "0-0",
+          "matchId": 120563
+        },
+        {
+          "date": "03/13/2026",
+          "opponent": "X40 7.0 WR Downing",
+          "venue": "Western Reserve Racquet and Fitness Club",
+          "result": "0-0",
+          "matchId": 120565
+        },
+        {
+          "date": "03/20/2026",
+          "opponent": "X40 7.0 MV1 Drenovsky",
+          "venue": "Cleveland State University (Medical Mutual Tennis Pavilion)",
+          "result": "0-0",
+          "matchId": 120566
+        },
+        {
+          "date": "04/10/2026",
+          "opponent": "X40 7.0 MV2 Gustafson",
+          "venue": "Cleveland State University (Medical Mutual Tennis Pavilion)",
+          "result": "0-0",
+          "matchId": 120570
+        },
+        {
+          "date": "04/24/2026",
+          "opponent": "X40 7.0 MV3 Nguyen",
+          "venue": "Cleveland State University (Medical Mutual Tennis Pavilion)",
+          "result": "0-0",
+          "matchId": 120573
+        },
+        {
+          "date": "05/01/2026",
+          "opponent": "X40 7.0 WR Downing",
+          "venue": "Cleveland State University (Medical Mutual Tennis Pavilion)",
+          "result": "0-0",
+          "matchId": 120575
+        }
+      ]
+    },
+    {
+      "url": "/adult/teamprofile.aspx?teamname=X40%207.0%20MV2%20Gustafson&year=2026",
+      "teamName": "X40 7.0 MV2 Gustafson",
+      "leagueName": "2026 NEOTA Mixed 40 & Over (Subflight 2)",
+      "leagueType": "Mixed 40+",
+      "section": "Midwest",
+      "gender": "X",
+      "level": "7.0",
+      "players": [
+        {
+          "name": "Ken Gustafson",
+          "location": "Willoughby, OH",
+          "gender": "M",
+          "ntrp": 4,
+          "wins": 3,
+          "losses": 0,
+          "dynamicRating": 3.82,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Kristin Chuko",
+          "location": "Willoughby, OH",
+          "gender": "F",
+          "ntrp": 4,
+          "wins": 4,
+          "losses": 2,
+          "dynamicRating": 3.74,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Pamela Zalba",
+          "location": "Cleveland, OH",
+          "gender": "F",
+          "ntrp": 4,
+          "wins": 1,
+          "losses": 2,
+          "dynamicRating": 3.62,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Karen Cipriani",
+          "location": "Chesterland, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 3.49,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Michael Falcone",
+          "location": "Shaker Heights, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.41,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Garnett Meador",
+          "location": "Gates Mills, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.28,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Ryan White",
+          "location": "Concord Township, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 3.28,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Rita Gilman",
+          "location": "Cleveland, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 3.25,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Cyrus Bazldjoo",
+          "location": "Solon, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.25,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Suber Huang",
+          "location": "Cleveland, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.25,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Richard Rozell",
+          "location": "Cleveland, OH",
+          "gender": "M",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 3.19,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Elyse Gustafson",
+          "location": "Willoughby, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 3.13,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Maureen Kelly",
+          "location": "Pepper Pike, OH",
+          "gender": "F",
+          "ntrp": 3.5,
+          "wins": 1,
+          "losses": 1,
+          "dynamicRating": 3.04,
+          "bubbleStatus": "risk_down"
+        },
+        {
+          "name": "Chuck Roman",
+          "location": "Mentor, OH",
+          "gender": "M",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 0,
+          "dynamicRating": 3.03,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Gwen Anderson",
+          "location": "Pepper Pike, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 2.98,
+          "bubbleStatus": "risk"
+        },
+        {
+          "name": "Karen McLeod",
+          "location": "CLEVELAND, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 2.9,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Alexander Khaykin",
+          "location": "Solon, OH",
+          "gender": "M",
+          "ntrp": 3,
+          "wins": 4,
+          "losses": 0,
+          "dynamicRating": 2.9,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Audrey Heckaman",
+          "location": "Cleveland, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 0,
+          "losses": 0,
+          "dynamicRating": 2.83,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Yuping Wu",
+          "location": "Beachwood, OH",
+          "gender": "F",
+          "ntrp": 3,
+          "wins": 1,
+          "losses": 3,
+          "dynamicRating": 2.71,
+          "bubbleStatus": "safe"
+        },
+        {
+          "name": "Scott Kelly",
+          "location": "Pepper Pike, OH",
+          "gender": "M",
+          "ntrp": 3,
+          "wins": 0,
+          "losses": 1,
+          "dynamicRating": 2.6,
+          "bubbleStatus": "safe"
+        }
+      ],
+      "opponentUrls": [
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20WR%20Downing&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20MV1%20Drenovsky&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20MM%20Ghosh&year=2026",
+        "/adult/teamprofile.aspx?teamname=X40%207.0%20MV3%20Nguyen&year=2026"
+      ],
+      "schedule": [
+        {
+          "date": "02/06/2026",
+          "opponent": "X40 7.0 WR Downing",
+          "venue": "Western Reserve Racquet and Fitness Club",
+          "result": "2-1",
+          "matchId": 120557
+        },
+        {
+          "date": "02/20/2026",
+          "opponent": "X40 7.0 MV1 Drenovsky",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "2-1",
+          "matchId": 120559
+        },
+        {
+          "date": "02/27/2026",
+          "opponent": "X40 7.0 MM Ghosh",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "0-0",
+          "matchId": 120560
+        },
+        {
+          "date": "03/13/2026",
+          "opponent": "X40 7.0 MV3 Nguyen",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "0-0",
+          "matchId": 120564
+        },
+        {
+          "date": "03/20/2026",
+          "opponent": "X40 7.0 WR Downing",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "0-0",
+          "matchId": 120567
+        },
+        {
+          "date": "03/27/2026",
+          "opponent": "X40 7.0 MV1 Drenovsky",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "0-0",
+          "matchId": 120569
+        },
+        {
+          "date": "04/10/2026",
+          "opponent": "X40 7.0 MM Ghosh",
+          "venue": "Cleveland State University (Medical Mutual Tennis Pavilion)",
+          "result": "0-0",
+          "matchId": 120570
+        },
+        {
+          "date": "05/01/2026",
+          "opponent": "X40 7.0 MV3 Nguyen",
+          "venue": "Mayfield Village Racquet Club",
+          "result": "0-0",
+          "matchId": 120574
+        }
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "matchId": 120558,
+      "date": "02/20/2026",
+      "venue": "Mayfield Village Racquet Club",
+      "league": "2026 Mixed 40+ Midwest Northeastern Ohio Area X 7.0",
+      "homeTeam": "X40 7.0 MV3 Nguyen",
+      "awayTeam": "X40 7.0 WR Downing",
+      "homeCourtsWon": 3,
+      "awayCourtsWon": 0,
+      "courts": [
+        {
+          "courtNumber": 1,
+          "home_player1": "Phong Nguyen",
+          "home_player2": "Donna Fleming",
+          "home_rating1": 3.99,
+          "home_rating2": 2.97,
+          "away_player1": "Derek Kohanski",
+          "away_player2": "Shachi Mody",
+          "away_rating1": 3.28,
+          "away_rating2": 3.16,
+          "score": "6-2 6-0",
+          "winner": "home"
+        },
+        {
+          "courtNumber": 2,
+          "home_player1": "Timothy Jones",
+          "home_player2": "Denise Hwang",
+          "home_rating1": 4,
+          "home_rating2": 3,
+          "away_player1": "Steven Parker",
+          "away_player2": "Stephanie Sneed",
+          "away_rating1": 3.3,
+          "away_rating2": 3.32,
+          "score": "6-3 6-2",
+          "winner": "home"
+        },
+        {
+          "courtNumber": 3,
+          "home_player1": "Frank Mercuri",
+          "home_player2": "Patricia Mercuri",
+          "home_rating1": 3.52,
+          "home_rating2": 3.49,
+          "away_player1": "Steve Nutt",
+          "away_player2": "Jo Ann FInk",
+          "away_rating1": 3.26,
+          "away_rating2": 3.33,
+          "score": "6-2 6-0",
+          "winner": "home"
+        }
+      ]
+    },
+    {
+      "matchId": 120527,
+      "date": "02/06/2026",
+      "venue": "North Canton Racquet Club",
+      "league": "2026 Mixed 40+ Midwest Northeastern Ohio Area X 7.0",
+      "homeTeam": "X40 7.0 NC2 Williams",
+      "awayTeam": "X40 7.0 NC1 Bailey",
+      "homeCourtsWon": 0,
+      "awayCourtsWon": 3,
+      "courts": [
+        {
+          "courtNumber": 1,
+          "home_player1": "Erin Gelal",
+          "home_player2": "Michael Williams",
+          "home_rating1": 2.99,
+          "home_rating2": 3.7,
+          "away_player1": "Ashley Bullach",
+          "away_player2": "Carl Blaine",
+          "away_rating1": 3.5,
+          "away_rating2": 3.5,
+          "score": "6-4 6-4",
+          "winner": "away"
+        },
+        {
+          "courtNumber": 2,
+          "home_player1": "Vicki Shepherd",
+          "home_player2": "Tim Shepherd",
+          "home_rating1": 2.92,
+          "home_rating2": 3.61,
+          "away_player1": "Rex Degler",
+          "away_player2": "Valerie Johnson",
+          "away_rating1": 3.5,
+          "away_rating2": 3.42,
+          "score": "6-3 6-2",
+          "winner": "away"
+        },
+        {
+          "courtNumber": 3,
+          "home_player1": "Shannon Zaher",
+          "home_player2": "Tom Webb",
+          "home_rating1": 2.98,
+          "home_rating2": 3,
+          "away_player1": "Kay McHolm",
+          "away_player2": "Elbert Enrique",
+          "away_rating1": 3.86,
+          "away_rating2": 2.75,
+          "score": "6-3 6-4",
+          "winner": "away"
+        }
+      ]
+    },
+    {
+      "matchId": 120529,
+      "date": "02/20/2026",
+      "venue": "Brookside Country Club",
+      "league": "2026 Mixed 40+ Midwest Northeastern Ohio Area X 7.0",
+      "homeTeam": "X40 7.0 BR Timken",
+      "awayTeam": "X40 7.0 NC2 Williams",
+      "homeCourtsWon": 1,
+      "awayCourtsWon": 2,
+      "courts": [
+        {
+          "courtNumber": 1,
+          "home_player1": "Fred Zalenski",
+          "home_player2": "Kristin Zalenski",
+          "home_rating1": 3.15,
+          "home_rating2": 3.4,
+          "away_player1": "Tom Webb",
+          "away_player2": "Kimberly Williams",
+          "away_rating1": 3.04,
+          "away_rating2": 3,
+          "score": "6-4 6-1",
+          "winner": "away"
+        },
+        {
+          "courtNumber": 2,
+          "home_player1": "Robert Timken",
+          "home_player2": "Sara Timken",
+          "home_rating1": 3.1,
+          "home_rating2": 3.18,
+          "away_player1": "David Currier",
+          "away_player2": "Jeannette Cho",
+          "away_rating1": 3.64,
+          "away_rating2": 2.71,
+          "score": "6-2 6-3",
+          "winner": "away"
+        },
+        {
+          "courtNumber": 3,
+          "home_player1": "Drew Swallen",
+          "home_player2": "Tiffany Ruwadi",
+          "home_rating1": null,
+          "home_rating2": null,
+          "away_player1": null,
+          "away_player2": null,
+          "away_rating1": null,
+          "away_rating2": null,
+          "score": "6-0 6-0",
+          "winner": "home"
+        }
+      ]
+    },
+    {
+      "matchId": 120528,
+      "date": "02/06/2026",
+      "venue": "Paramount Tennis Club",
+      "league": "2026 Mixed 40+ Midwest Northeastern Ohio Area X 7.0",
+      "homeTeam": "X40 7.0 PM Rhyner",
+      "awayTeam": "X40 7.0 LT McKenzie",
+      "homeCourtsWon": 3,
+      "awayCourtsWon": 0,
+      "courts": [
+        {
+          "courtNumber": 1,
+          "home_player1": "Michaelia Cucci",
+          "home_player2": "Christopher Baranek",
+          "home_rating1": 2.74,
+          "home_rating2": 4,
+          "away_player1": "Geoff Fiedler",
+          "away_player2": "Donna Balc",
+          "away_rating1": 3.18,
+          "away_rating2": 3.5,
+          "score": "6-2 7-6",
+          "winner": "home"
+        },
+        {
+          "courtNumber": 2,
+          "home_player1": "Alison Baranek",
+          "home_player2": "Wade Hurley",
+          "home_rating1": 3.5,
+          "home_rating2": 3.49,
+          "away_player1": "Leslie Miller",
+          "away_player2": "Jeffrey Miller",
+          "away_rating1": 3.27,
+          "away_rating2": 3.51,
+          "score": "5-7 6-2 1-0",
+          "winner": "home"
+        },
+        {
+          "courtNumber": 3,
+          "home_player1": "Lauren Thomas",
+          "home_player2": "Jun Hee Han",
+          "home_rating1": 3.42,
+          "home_rating2": 3.48,
+          "away_player1": "Ryan Garst",
+          "away_player2": "Alissa McKenzie",
+          "away_rating1": 3.39,
+          "away_rating2": 3.12,
+          "score": "3-6 6-3 1-0",
+          "winner": "home"
+        }
+      ]
+    },
+    {
+      "matchId": 120531,
+      "date": "02/20/2026",
+      "venue": "Towpath Tennis Center",
+      "league": "2026 Mixed 40+ Midwest Northeastern Ohio Area X 7.0",
+      "homeTeam": "X40 7.0 TP Fox",
+      "awayTeam": "X40 7.0 LT McKenzie",
+      "homeCourtsWon": 1,
+      "awayCourtsWon": 2,
+      "courts": [
+        {
+          "courtNumber": 1,
+          "home_player1": "Steve Barker",
+          "home_player2": "Lori Young",
+          "home_rating1": 3.16,
+          "home_rating2": 3.26,
+          "away_player1": "Ryan Garst",
+          "away_player2": "Kristin Lenton",
+          "away_rating1": 3.43,
+          "away_rating2": 3.31,
+          "score": "6-7 6-2 1-0",
+          "winner": "home"
+        },
+        {
+          "courtNumber": 2,
+          "home_player1": "Brian Lambright",
+          "home_player2": "Susan Voth",
+          "home_rating1": 2.77,
+          "home_rating2": 3.14,
+          "away_player1": "Steven Wood",
+          "away_player2": "Christina Reeves",
+          "away_rating1": 3,
+          "away_rating2": 3.45,
+          "score": "6-4 6-2",
+          "winner": "away"
+        },
+        {
+          "courtNumber": 3,
+          "home_player1": "Keith Amtsberg",
+          "home_player2": "Alice Lewis",
+          "home_rating1": 3.08,
+          "home_rating2": 3.28,
+          "away_player1": "Steve Gehring",
+          "away_player2": "Jennifer Ruggles",
+          "away_rating1": 3.4,
+          "away_rating2": 3.48,
+          "score": "6-1 6-1",
+          "winner": "away"
+        }
+      ]
+    },
+    {
+      "matchId": 120526,
+      "date": "02/06/2026",
+      "venue": "Towpath Tennis Center",
+      "league": "2026 Mixed 40+ Midwest Northeastern Ohio Area X 7.0",
+      "homeTeam": "X40 7.0 TP Fox",
+      "awayTeam": "X40 7.0 BR Timken",
+      "homeCourtsWon": 1,
+      "awayCourtsWon": 2,
+      "courts": [
+        {
+          "courtNumber": 1,
+          "home_player1": "Steve Barker",
+          "home_player2": "Christine Norman",
+          "home_rating1": 3.15,
+          "home_rating2": 3.27,
+          "away_player1": "Nathaniel Brahler",
+          "away_player2": "Rachel Brahler",
+          "away_rating1": 3.5,
+          "away_rating2": 2.68,
+          "score": "6-3 6-4",
+          "winner": "home"
+        },
+        {
+          "courtNumber": 2,
+          "home_player1": "William Fox",
+          "home_player2": "Michelle Fox",
+          "home_rating1": 2.98,
+          "home_rating2": 3.16,
+          "away_player1": "David Tsai",
+          "away_player2": "Traci Tsai",
+          "away_rating1": 3,
+          "away_rating2": 3.22,
+          "score": "6-1 7-6",
+          "winner": "away"
+        },
+        {
+          "courtNumber": 3,
+          "home_player1": "Keith Amtsberg",
+          "home_player2": "Alice Lewis",
+          "home_rating1": null,
+          "home_rating2": 3.28,
+          "away_player1": "Dan Paulus",
+          "away_player2": "Jacqueline Paulus",
+          "away_rating1": 3.96,
+          "away_rating2": 2.75,
+          "score": "7-5 6-2",
+          "winner": "away"
+        }
+      ]
+    },
+    {
+      "matchId": 120557,
+      "date": "02/06/2026",
+      "venue": "Western Reserve Racquet and Fitness Club",
+      "league": "2026 Mixed 40+ Midwest Northeastern Ohio Area X 7.0",
+      "homeTeam": "X40 7.0 WR Downing",
+      "awayTeam": "X40 7.0 MV2 Gustafson",
+      "homeCourtsWon": 1,
+      "awayCourtsWon": 2,
+      "courts": [
+        {
+          "courtNumber": 1,
+          "home_player1": "Christopher Downing",
+          "home_player2": "Stephanie Sneed",
+          "home_rating1": 3.25,
+          "home_rating2": 3.34,
+          "away_player1": "Ken Gustafson",
+          "away_player2": "Yuping Wu",
+          "away_rating1": 3.82,
+          "away_rating2": 2.72,
+          "score": "6-4 7-5",
+          "winner": "away"
+        },
+        {
+          "courtNumber": 2,
+          "home_player1": "Steve Nutt",
+          "home_player2": "Christine Bucknell",
+          "home_rating1": null,
+          "home_rating2": null,
+          "away_player1": "Pamela Zalba",
+          "away_player2": "Alexander Khaykin",
+          "away_rating1": null,
+          "away_rating2": null,
+          "score": "1-2",
+          "winner": "away"
+        },
+        {
+          "courtNumber": 3,
+          "home_player1": "Steven Parker",
+          "home_player2": "Carolyn Kara",
+          "home_rating1": 3.3,
+          "home_rating2": 2.85,
+          "away_player1": "Maureen Kelly",
+          "away_player2": "Scott Kelly",
+          "away_rating1": 3.06,
+          "away_rating2": null,
+          "score": "6-1 6-4",
+          "winner": "home"
+        }
+      ]
+    },
+    {
+      "matchId": 120556,
+      "date": "02/06/2026",
+      "venue": "Mayfield Village Racquet Club",
+      "league": "2026 Mixed 40+ Midwest Northeastern Ohio Area X 7.0",
+      "homeTeam": "X40 7.0 MV1 Drenovsky",
+      "awayTeam": "X40 7.0 MM Ghosh",
+      "homeCourtsWon": 3,
+      "awayCourtsWon": 0,
+      "courts": [
+        {
+          "courtNumber": 1,
+          "home_player1": "Preet Kang",
+          "home_player2": "Dongmei Zhang",
+          "home_rating1": 3.48,
+          "home_rating2": 3.44,
+          "away_player1": "Jon Birkett",
+          "away_player2": "Tisha Bell",
+          "away_rating1": 3.74,
+          "away_rating2": 2.95,
+          "score": "6-2 4-6 1-0",
+          "winner": "home"
+        },
+        {
+          "courtNumber": 2,
+          "home_player1": "GAUTAM PATHAK",
+          "home_player2": "Xiaozhong Men",
+          "home_rating1": 3.64,
+          "home_rating2": 3,
+          "away_player1": "Debabrata Ghosh",
+          "away_player2": "Vanessa Furrer",
+          "away_rating1": 3.25,
+          "away_rating2": 3.08,
+          "score": "6-3 7-5",
+          "winner": "home"
+        },
+        {
+          "courtNumber": 3,
+          "home_player1": "Kathleen Aranavage",
+          "home_player2": "Bob Berichon",
+          "home_rating1": 3.5,
+          "home_rating2": 3.32,
+          "away_player1": "Alamelu Arakoni",
+          "away_player2": "Venkatraman Arakoni",
+          "away_rating1": 3,
+          "away_rating2": 3.25,
+          "score": "6-4 6-0",
+          "winner": "home"
+        }
+      ]
+    },
+    {
+      "matchId": 120559,
+      "date": "02/20/2026",
+      "venue": "Mayfield Village Racquet Club",
+      "league": "2026 Mixed 40+ Midwest Northeastern Ohio Area X 7.0",
+      "homeTeam": "X40 7.0 MV2 Gustafson",
+      "awayTeam": "X40 7.0 MV1 Drenovsky",
+      "homeCourtsWon": 2,
+      "awayCourtsWon": 1,
+      "courts": [
+        {
+          "courtNumber": 1,
+          "home_player1": "Rita Gilman",
+          "home_player2": "Ryan White",
+          "home_rating1": 3.25,
+          "home_rating2": 3.28,
+          "away_player1": "Janeen Miklowski",
+          "away_player2": "George Raguz",
+          "away_rating1": 3.76,
+          "away_rating2": 3,
+          "score": "6-3 3-6 1-0",
+          "winner": "home"
+        },
+        {
+          "courtNumber": 2,
+          "home_player1": "Garnett Meador",
+          "home_player2": "Yuping Wu",
+          "home_rating1": 3.28,
+          "home_rating2": 2.74,
+          "away_player1": "Bob Berichon",
+          "away_player2": "Lauren Smith",
+          "away_rating1": 3.32,
+          "away_rating2": 3.36,
+          "score": "6-0 7-5",
+          "winner": "away"
+        },
+        {
+          "courtNumber": 3,
+          "home_player1": "Kristin Chuko",
+          "home_player2": "Alexander Khaykin",
+          "home_rating1": 3.66,
+          "home_rating2": 2.85,
+          "away_player1": "Rebecca Drenovsky",
+          "away_player2": "Brandon Carrus",
+          "away_rating1": 2.99,
+          "away_rating2": 3.08,
+          "score": "7-5 6-3",
+          "winner": "home"
+        }
+      ]
+    }
+  ]
+}
