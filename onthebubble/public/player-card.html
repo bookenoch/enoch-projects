@@ -81,17 +81,17 @@
   }
 
   .bubble-badge {
-    position: absolute;
-    top: 28px; right: 20px;
+    display: inline-flex;
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    padding: 4px 10px;
+    padding: 3px 8px;
     border-radius: 20px;
-    display: flex;
     align-items: center;
     gap: 5px;
+    margin-left: 6px;
+    vertical-align: middle;
   }
   .bubble-badge.risk {
     background: rgba(224, 85, 85, 0.12);
@@ -555,14 +555,11 @@ function renderCard(p, courts) {
   document.getElementById('card').innerHTML = `
     <!-- HEADER -->
     <div class="card-header">
-      <div class="bubble-badge ${status}">
-        <div class="bubble-dot"></div>${badgeLabel}
-      </div>
       <div class="player-meta">
         <div class="avatar">${initials(p.name)}</div>
         <div class="player-info">
           <div class="player-name">${p.name}</div>
-          <div class="player-sub">${[p.location, p.gender].filter(Boolean).join(' \u2022 ')}</div>
+          <div class="player-sub">${[p.location, p.gender].filter(Boolean).join(' \u2022 ')}<span class="bubble-badge ${status}"><span class="bubble-dot"></span>${badgeLabel}</span></div>
         </div>
       </div>
       <div class="rating-row">
