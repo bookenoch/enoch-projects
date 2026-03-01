@@ -415,18 +415,46 @@ function formatDate(s) {
   return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 }
 
+const DISTRICT_NAMES = {
+  NEOTA: 'Northeastern Ohio Area',
+  SWOTA: 'Southwestern Ohio Area',
+  COTA:  'Central Ohio Area',
+  NWOTA: 'Northwestern Ohio Area',
+};
+
 function parseLeague(league) {
   if (!league) return { line1: '', line2: '' };
   const s = league.replace(/^\d{4}\s*/, '');
-  // Pattern: {type} {age}+ {section} {district...} {gender} {ntrp}
-  const m = s.match(/^(?:Adult|Mixed)\s+(\d+\+)\s+(.+?)\s+([MWX])\s+([\d.]+)$/);
-  if (!m) return { line1: s, line2: '' };
   const genderMap = { M: 'Men', W: 'Women', X: 'Mixed' };
-  const parts = m[2].split(' ');
-  return {
-    line1: `${m[1]} ${m[4]} ${genderMap[m[3]] || m[3]}`,
-    line2: `${parts[0][0].toUpperCase() + parts[0].slice(1).toLowerCase()} \u2022 ${parts.slice(1).join(' ')}`
-  };
+
+  // Format 1: scraped "Adult 40+ Midwest Northeastern Ohio Area M 4.0"
+  const m = s.match(/^(?:Adult|Mixed)\s+(\d+\+)\s+(.+?)\s+([MWX])\s+([\d.]+)$/);
+  if (m) {
+    const parts = m[2].split(' ');
+    return {
+      line1: `${m[1]} ${m[4]} ${genderMap[m[3]] || m[3]}`,
+      line2: `${parts[0][0].toUpperCase() + parts[0].slice(1).toLowerCase()} \u2022 ${parts.slice(1).join(' ')}`
+    };
+  }
+
+  // Format 2: USTA "NEOTA Mixed 40 & Over" or "NEOTA Mixed 40 & Over (Subflight 2)"
+  const u = s.match(/^(NEOTA|SWOTA|COTA|NWOTA)\s+(Adult|Mixed)\s+(\d+)\s+&\s+Over(?:\s+\((.+?)\))?$/i);
+  if (u) {
+    const district = DISTRICT_NAMES[u[1].toUpperCase()] || u[1];
+    const type = u[2];
+    const age = u[3] + '+';
+    // Try to extract level from subflight info or default
+    const sub = u[4] || '';
+    const levelMatch = sub.match(/([\d.]+)/);
+    const level = levelMatch ? Number(levelMatch[1]).toFixed(1) : '';
+    const gender = type === 'Mixed' ? 'Mixed' : 'Men';
+    return {
+      line1: level ? `${age} ${level} ${gender}` : `${age} ${gender}`,
+      line2: `Midwest \u2022 ${district}`
+    };
+  }
+
+  return { line1: s, line2: '' };
 }
 
 function bubblePct(ntrp, dynamic_rating) {
@@ -469,8 +497,8 @@ function renderCard(p, courts) {
   const thirdPct = s.third_set_pct_2025 != null ? `${s.third_set_pct_2025}%` : '—';
   const postPct  = s.postseason_pct_2025 != null ? `${s.postseason_pct_2025}%` : '—';
 
-  // Percentage color rule: >= 50% green, < 50% red
-  const pctClass = v => v != null ? (v >= 50 ? 'green' : 'red') : '';
+  // Percentage color rule: > 50% green, exactly 50% white, < 50% red
+  const pctClass = v => v != null ? (v > 50 ? 'green' : v < 50 ? 'red' : '') : '';
   // Record color rule: winning green, losing red, even white
   const recordClass = (w, l) => w > l ? 'green' : w < l ? 'red' : '';
   const recordStrClass = str => {
@@ -629,15 +657,15 @@ function renderCard(p, courts) {
       <div class="section-label">Streak Records</div>
       <div class="stats-grid">
         <div class="stat-cell">
-          <div class="stat-num green">${longestW}</div>
+          <div class="stat-num ${longestW !== '—' ? 'green' : ''}">${longestW}</div>
           <div class="stat-desc">Longest Win</div>
         </div>
         <div class="stat-cell">
-          <div class="stat-num red">${longestL}</div>
+          <div class="stat-num ${longestL !== '—' ? 'red' : ''}">${longestL}</div>
           <div class="stat-desc">Longest Loss</div>
         </div>
         <div class="stat-cell">
-          <div class="stat-num" style="color:var(--green)">${avgOpp}</div>
+          <div class="stat-num">${avgOpp}</div>
           <div class="stat-desc">Avg Opp Rtg</div>
         </div>
       </div>
